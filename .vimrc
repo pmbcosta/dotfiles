@@ -35,6 +35,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " ================ General Config ====================
 
@@ -52,10 +54,14 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
+" Theme Configuration
+colorscheme gruvbox
 set background=dark
 syntax on
-color mango
+
+if !has("gui_running")
+ let g:gruvbox_italic=0
+endif
 
 
 " Change leader to a comma because the backslash is too far away
