@@ -37,6 +37,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'derekwyatt/vim-scala'
 
 " ================ General Config ====================
 
