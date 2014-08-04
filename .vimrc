@@ -1,17 +1,4 @@
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.  set nocompatible
-filetype off
-
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
-
-" ================ Shell Config =====================
-" set shell=zsh\ -i
-
+set nocompatible
 
 " ================ Vundle Config =====================
 
@@ -144,7 +131,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
 
 " ================ Custom Settings ========================
 
