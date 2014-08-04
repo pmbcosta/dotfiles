@@ -53,6 +53,7 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 set ignorecase "Case insensitive search
+set smartcase
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -131,7 +132,12 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"
+" ================ Disable arrow keys ========================
+
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " ================ Scrolling ========================
 
