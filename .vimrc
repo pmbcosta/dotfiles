@@ -25,6 +25,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'sophacles/vim-processing'
 
 " ================ General Config ====================
 
@@ -119,6 +120,10 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+set wildignore+=*/bin/**
+set wildignore+=*/gen/**
+set wildignore+=*/target/**
+
 " ================ Disable arrow keys ========================
 
 nnoremap <Left> :echoe "Use h"<CR>
@@ -140,3 +145,4 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ================ Custom Mappings ========================
 " Toggle NerdTreeTabsToggle With /n
+map <Leader>n :NERDTreeTabsToggle<CR>
