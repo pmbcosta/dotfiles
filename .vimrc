@@ -64,6 +64,7 @@ endif
 " the plugins.
 let mapleader=","
 
+let loaded_matchparen = 1 " Disable Highlighting of matching parens
 
 " ================ Turn Off Swap Files ==============
 
