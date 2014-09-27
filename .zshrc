@@ -56,7 +56,10 @@ set -o vi
 
 # Java & Android config
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-export GRADLE_HOME=$HOME/Programs/gradle-1.11
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export GRADLE_HOME=$HOME/Programs/gradle/gradle-2.1
 export SMALI=$HOME/Programs/dextools/smali
 export BAKSMALI=$HOME/Programs/dextools/baksmali
 
@@ -74,7 +77,11 @@ export PATH="/opt/local/bin:/opt/local/sbin:/Users/paulocosta/android-sdks/tools
 export PROJECTS=$HOME/Projetos
 export GM_G=$PROJECTS/greenmile/gm-driver-android-gradle/gm-driver-android/greenmile-android
 export GM_M=$PROJECTS/greenmile/gm-driver-android/greenmile-android
-export SEER=$PROJECTS/personal/seer
+export MONET=$PROJECTS/greenmile/monet-web-client
+export SERVER=$PROJECTS/greenmile/gm-server
+export DF=$PROJECTS/personal/dotfiles/
+export blog=$PROJECTS/personal/paulombcosta.github.io
+export vagrant=$PROJECTS/vagrant
 
 # Vim's gruvbox
 ~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
