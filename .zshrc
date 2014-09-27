@@ -71,7 +71,6 @@ export GVM_ROOT=$HOME/.gvm
 
 # Setting path variables
 PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI
-export PATH="/opt/local/bin:/opt/local/sbin:/Users/paulocosta/android-sdks/tools:/Users/paulocosta/android-sdks/platform-tools:/Users/paulocosta/Programs/gradle-1.10/bin:/Users/paulocosta/.rvm/gems/ruby-1.9.3-p392/bin:/Users/paulocosta/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/paulocosta/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/paulocosta/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/paulocosta/go/bin:/etc/sonarqube/bin/macosx-universal-64"
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
