@@ -55,8 +55,8 @@ export EDITOR='vim'
 set -o vi
 
 # Java & Android config
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export GRADLE_HOME=$HOME/Programs/gradle/gradle-2.1
@@ -70,11 +70,11 @@ export GVM_ROOT=$HOME/.gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # Setting path variables
-PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI
+PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
-export GM_G=$PROJECTS/greenmile/gm-driver-android-gradle/gm-driver-android/greenmile-android
+export GM_G=$PROJECTS/greenmile/gm-driver-android-gradle/gm-driver-android/driver
 export GM_M=$PROJECTS/greenmile/gm-driver-android/greenmile-android
 export MONET=$PROJECTS/greenmile/monet-web-client
 export SERVER=$PROJECTS/greenmile/gm-server
