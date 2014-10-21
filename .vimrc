@@ -26,6 +26,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'sophacles/vim-processing'
+Plugin 'tomtom/tcomment_vim'
 
 " ================ General Config ====================
 
