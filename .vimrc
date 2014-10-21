@@ -126,25 +126,29 @@ set wildignore+=*/bin/**
 set wildignore+=*/gen/**
 set wildignore+=*/target/**
 
-" ================ Disable arrow keys ========================
+" ================ Custom Mappings========================
+
+" Disable arrow keys
 
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" ================ Scrolling ========================
+" Bind leader-leader to tcomment
+map <Leader><Leader> gc
+
+" Toggle NerdTreeTabsToggle With /n
+map <Leader>n :NERDTreeTabsToggle<CR>
+
+" ================ Scrolling ================================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ================ Custom Settings ========================
+" ================ Custom Settings =========================
 
 syntax enable
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" ================ Custom Mappings ========================
-" Toggle NerdTreeTabsToggle With /n
-map <Leader>n :NERDTreeTabsToggle<CR>
