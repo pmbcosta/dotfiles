@@ -62,6 +62,7 @@ export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Hom
 export GRADLE_HOME=$HOME/Programs/gradle/gradle-2.1
 export SMALI=$HOME/Programs/dextools/smali
 export BAKSMALI=$HOME/Programs/dextools/baksmali
+export ANDROID_HOME=$HOME/android-sdks
 
 # Golang config
 export GOPATH=$HOME/go
