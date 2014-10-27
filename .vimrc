@@ -27,6 +27,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'sophacles/vim-processing'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'dag/vim2hs'
+Plugin 'flazz/vim-colorschemes'
 
 " ================ General Config ====================
 
@@ -49,15 +51,19 @@ set smartcase
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-" Theme Configuration
-colorscheme gruvbox
-set background=dark
-syntax on
+" Gruvbox Theme Configuration
+" colorscheme gruvbox
+" set background=dark
+" syntax on
+"
+" if !has("gui_running")
+"  let g:gruvbox_italic=0
+" endif
 
-if !has("gui_running")
- let g:gruvbox_italic=0
-endif
-
+" colorscheme gruvbox
+" colorscheme xterm16
+" colorscheme inkpot
+colorscheme up
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
