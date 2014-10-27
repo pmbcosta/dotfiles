@@ -81,7 +81,7 @@ export MONET=$PROJECTS/greenmile/monet-web-client
 export SERVER=$PROJECTS/greenmile/gm-server
 export DF=$PROJECTS/personal/dotfiles/
 export blog=$PROJECTS/personal/paulombcosta.github.io
-export vagrant=$PROJECTS/vagrant
+export ENV=$PROJECTS/greenmile/gm-dev-env
 
 # Vim's gruvbox
 ~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
