@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="nebirhos"
+#ZSH_THEME="nebirhos"
+ZSH_THEME="mh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -55,8 +56,8 @@ export EDITOR='vim'
 set -o vi
 
 # Java & Android config
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export GRADLE_HOME=$HOME/Programs/gradle/gradle-2.1
@@ -80,8 +81,9 @@ export GM_M=$PROJECTS/greenmile/gm-driver-android/greenmile-android
 export MONET=$PROJECTS/greenmile/monet-web-client
 export SERVER=$PROJECTS/greenmile/gm-server
 export DF=$PROJECTS/personal/dotfiles/
-export blog=$PROJECTS/personal/paulombcosta.github.io
+export BLOG=$PROJECTS/personal/paulombcosta.github.io
 export ENV=$PROJECTS/greenmile/gm-dev-env
+export UTILS=$PROJECTS/utils
 
 # Vim's gruvbox
 ~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
