@@ -1,34 +1,44 @@
-set nocompatible
+" Skip initialization for vim-tiny or vim-small
+if !1 | finish | endif
 
-" ================ Vundle Config =====================
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+" ================ NeoBundle Config =====================
 
-"Let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+if has('vim_starting')
+  set nocompatible
 
-" Plugins
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
-Plugin 'hsanson/vim-android'
-Plugin 'moll/vim-node'
-Plugin 'pangloss/vim-javascript'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'sophacles/vim-processing'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'dag/vim2hs'
-Plugin 'flazz/vim-colorschemes'
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" NeoBundles
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'hsanson/vim-android'
+NeoBundle 'moll/vim-node'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'morhetz/gruvbox'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'sophacles/vim-processing'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'dag/vim2hs'
+NeoBundle 'flazz/vim-colorschemes'
+
+call neobundle#end()
+
+NeoBundleCheck
 
 " ================ General Config ====================
 
