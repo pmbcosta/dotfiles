@@ -35,6 +35,7 @@ NeoBundle 'sophacles/vim-processing'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 
