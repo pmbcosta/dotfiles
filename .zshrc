@@ -61,7 +61,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
-export GRADLE_HOME=$HOME/Programs/gradle/gradle-2.1
 export SMALI=$HOME/Programs/dextools/smali
 export BAKSMALI=$HOME/Programs/dextools/baksmali
 export ANDROID_HOME=$HOME/android-sdks
