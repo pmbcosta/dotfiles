@@ -36,6 +36,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'tfnico/vim-gradle'
+NeoBundle 'guns/vim-clojure-static'
 
 call neobundle#end()
 
