@@ -56,6 +56,9 @@ export EDITOR='vim'
 # Setting zsrch vim mode
 set -o vi
 
+# Yesod
+export YESOD=/Users/paulocosta/Library/Haskell/bin
+
 # Java & Android config
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
@@ -72,7 +75,7 @@ export GVM_ROOT=$HOME/.gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # Setting path variables
-PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator
+PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
@@ -84,6 +87,7 @@ export DF=$PROJECTS/personal/dotfiles/
 export BLOG=$PROJECTS/personal/paulombcosta.github.io
 export ENV=$PROJECTS/greenmile/gm-dev-env
 export UTILS=$PROJECTS/utils
+
 
 # Vim's gruvbox
 ~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
