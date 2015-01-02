@@ -38,6 +38,8 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'sirver/ultisnips'
+NeoBundle 'ervandew/supertab'
 
 call neobundle#end()
 
@@ -170,4 +172,12 @@ set sidescroll=1
 
 syntax enable
 
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
