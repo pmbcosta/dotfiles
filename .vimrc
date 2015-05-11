@@ -35,11 +35,14 @@ NeoBundle 'sophacles/vim-processing'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Valloric/YouCompleteMe'
+" NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'sirver/ultisnips'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'lambdatoast/elm.vim'
+NeoBundle 'ekalinin/Dockerfile.vim"'
+NeoBundle 'chase/vim-ansible-yaml'
 
 call neobundle#end()
 

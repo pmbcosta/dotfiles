@@ -29,7 +29,7 @@ ZSH_THEME="mh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew mvn npm node web-search)
+plugins=(git brew mvn npm node web-search docker gradle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,7 +88,16 @@ export BLOG=$PROJECTS/personal/paulombcosta.github.io
 export ENV=$PROJECTS/greenmile/gm-dev-env
 export UTILS=$PROJECTS/utils
 
+#Docker
+export DOCKER_CERT_PATH=/Users/paulocosta/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
 
 # Vim's gruvbox
 ~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
 
+eval "$(pyenv init -)"
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
