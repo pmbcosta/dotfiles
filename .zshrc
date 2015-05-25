@@ -75,7 +75,7 @@ export GVM_ROOT=$HOME/.gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # Setting path variables
-PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
+export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
