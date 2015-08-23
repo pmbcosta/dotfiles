@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <keymap version="1" name="Eclipse copy copy" parent="Eclipse">
   <action id="$Copy">
     <keyboard-shortcut first-keystroke="control C" />
@@ -169,4 +168,3 @@
     <keyboard-shortcut first-keystroke="control alt UP" />
   </action>
 </keymap>
-

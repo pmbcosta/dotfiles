@@ -60,22 +60,17 @@ set -o vi
 export YESOD=/Users/paulocosta/Library/Haskell/bin
 
 # Java & Android config
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
-export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
-export SMALI=$HOME/Programs/dextools/smali
-export BAKSMALI=$HOME/Programs/dextools/baksmali
-export ANDROID_HOME=$HOME/android-sdks
+export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+export JAVA_HOME=$JAVA7_HOME
+export ANDROID_HOME=$HOME/library/Android/sdk
 
 # Golang config
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-export GVM_ROOT=$HOME/.gvm
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
+#
 # Setting path variables
 export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
+export PATH=$PATH:$JAVA_HOME
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
@@ -92,12 +87,3 @@ export UTILS=$PROJECTS/utils
 export DOCKER_CERT_PATH=/Users/paulocosta/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
-
-# Vim's gruvbox
-~/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
-
-eval "$(pyenv init -)"
-
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh

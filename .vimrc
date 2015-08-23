@@ -41,6 +41,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'lambdatoast/elm.vim'
 NeoBundle 'ekalinin/Dockerfile.vim"'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
