@@ -168,7 +168,7 @@ map <Leader><Leader> gc
 nmap <Leader>n :NERDTreeTabsToggle<CR>
 
 " Leader-M to next window
-nmap <Leader>m <c-w>w<CR>
+nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
 
 " ================ Scrolling ================================
 
