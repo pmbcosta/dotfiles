@@ -43,6 +43,8 @@ NeoBundle 'ekalinin/Dockerfile.vim"'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'eapache/rainbow_parentheses.vim'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'bling/vim-airline.git'
 
 call neobundle#end()
 
@@ -163,7 +165,10 @@ nnoremap <Down> :echoe "Use j"<CR>
 map <Leader><Leader> gc
 
 " Toggle NerdTreeTabsToggle With /n
-map <Leader>n :NERDTreeTabsToggle<CR>
+nmap <Leader>n :NERDTreeTabsToggle<CR>
+
+" Leader-M to next window
+nmap <Leader>m <c-w>w<CR>
 
 " ================ Scrolling ================================
 
