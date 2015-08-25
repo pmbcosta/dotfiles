@@ -42,6 +42,8 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'bling/vim-airline.git'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-salve'
+NeoBundle 'tpope/vim-classpath.git'
 
 call neobundle#end()
 
@@ -166,6 +168,9 @@ nmap <Leader>n :NERDTreeTabsToggle<CR>
 
 " Leader-M to next window
 nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
+
+" Leader-e to evaluate Clojure expression
+nmap <Leader>e :Eval<CR>
 
 " ================ Scrolling ================================
 
