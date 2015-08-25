@@ -72,19 +72,3 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
 export PATH=$PATH:$JAVA_HOME
 export PATH=$PATH:$GOPATH
-
-# Projects shortcuts
-export PROJECTS=$HOME/Projetos
-export GM_G=$PROJECTS/greenmile/gm-driver-android-gradle/gm-driver-android/driver
-export GM_M=$PROJECTS/greenmile/gm-driver-android/greenmile-android
-export MONET=$PROJECTS/greenmile/monet-web-client
-export SERVER=$PROJECTS/greenmile/gm-server
-export DF=$PROJECTS/personal/dotfiles/
-export BLOG=$PROJECTS/personal/paulombcosta.github.io
-export ENV=$PROJECTS/greenmile/gm-dev-env
-export UTILS=$PROJECTS/utils
-
-#Docker
-export DOCKER_CERT_PATH=/Users/paulocosta/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
