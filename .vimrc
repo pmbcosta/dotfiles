@@ -45,6 +45,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'eapache/rainbow_parentheses.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'bling/vim-airline.git'
+NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 
@@ -218,3 +219,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1

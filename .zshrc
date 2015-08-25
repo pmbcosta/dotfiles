@@ -71,6 +71,7 @@ export GOPATH=$HOME/go
 # Setting path variables
 export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
 export PATH=$PATH:$JAVA_HOME
+export PATH=$PATH:$GOPATH
 
 # Projects shortcuts
 export PROJECTS=$HOME/Projetos
