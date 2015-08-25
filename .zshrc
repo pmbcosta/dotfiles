@@ -66,7 +66,7 @@ export JAVA_HOME=$JAVA7_HOME
 export ANDROID_HOME=$HOME/library/Android/sdk
 
 # Golang config
-export GOPATH=$HOME/go
+export GOPATH=$HOME/Projects/learning/go
 #
 # Setting path variables
 export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
