@@ -170,7 +170,7 @@ nmap <Leader>n :NERDTreeTabsToggle<CR>
 nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
 
 " Leader-e to evaluate Clojure expression
-nmap <Leader>e :Eval<CR>
+map <Leader>e :Eval<CR>
 
 " ================ Scrolling ================================
 
