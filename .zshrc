@@ -72,3 +72,8 @@ export GOPATH=$HOME/Projects/learning/go
 export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
 export PATH=$PATH:$JAVA_HOME
 export PATH=$PATH:$GOPATH
+
+export NVM_DIR="/Users/paulo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export GO15VENDOREXPERIMENT=1

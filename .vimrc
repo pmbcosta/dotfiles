@@ -44,6 +44,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-salve'
 NeoBundle 'tpope/vim-classpath.git'
+NeoBundle 'SirVer/ultisnips'
 
 call neobundle#end()
 
@@ -225,8 +226,15 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " vim-go
+let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" let g:ycm_add_preview_to_completeopt = 0
+" let g:ycm_min_num_of_chars_for_completion = 1
+" let g:ycm_auto_trigger = 1
+" set completeopt-=preview
+
