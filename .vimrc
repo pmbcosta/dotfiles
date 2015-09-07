@@ -45,6 +45,7 @@ NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-salve'
 NeoBundle 'tpope/vim-classpath.git'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'ahw/vim-pbcopy'
 
 call neobundle#end()
 
