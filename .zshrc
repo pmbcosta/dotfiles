@@ -85,10 +85,14 @@ function dssh() {
   docker exec -it $1 /bin/bash
 }
 
-function dmls() {
-  docker-machine ls
-}
-
 function dmev() {
   eval $(docker-machine env $1)
 }
+
+function clear_containers() {
+  docker rm `docker ps --no-trunc -aq`
+}
+
+alias d='docker'
+alias dm='docker-machine'
+alias dc='docker-compose'

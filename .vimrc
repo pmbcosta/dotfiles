@@ -46,6 +46,7 @@ NeoBundle 'tpope/vim-salve'
 NeoBundle 'tpope/vim-classpath.git'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'ahw/vim-pbcopy'
+NeoBundle 'jimenezrick/vimerl'
 
 call neobundle#end()
 
