@@ -80,6 +80,8 @@ tmp/
 # Mac
 .DS_Store
 
-.vim/bundle
-.vim/backups
-.vim/.netrwhist
+# Vim
+.vim
+
+# Vagrant
+.vagrant/
