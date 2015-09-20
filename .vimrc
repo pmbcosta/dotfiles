@@ -10,47 +10,44 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/plugged')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'derekwyatt/vim-scala'
+Plug 'tomtom/tcomment_vim'
+Plug 'dag/vim2hs'
+Plug 'flazz/vim-colorschemes'
+Plug 'tfnico/vim-gradle'
+Plug 'guns/vim-clojure-static'
+Plug 'ervandew/supertab'
+Plug 'lambdatoast/elm.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'fatih/vim-go'
+Plug 'eapache/rainbow_parentheses.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'bling/vim-airline'
+Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-classpath'
+Plug 'SirVer/ultisnips'
+Plug 'ahw/vim-pbcopy'
+Plug 'jimenezrick/vimerl'
+Plug 'suan/vim-instant-markdown'
+Plug 'tpope/vim-markdown'
 
-" NeoBundles
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'moll/vim-node'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'dag/vim2hs'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'tfnico/vim-gradle'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'lambdatoast/elm.vim'
-NeoBundle 'ekalinin/Dockerfile.vim"'
-NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'eapache/rainbow_parentheses.vim'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'bling/vim-airline.git'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-salve'
-NeoBundle 'tpope/vim-classpath.git'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'ahw/vim-pbcopy'
-NeoBundle 'jimenezrick/vimerl'
-
-call neobundle#end()
-
-NeoBundleCheck
+call plug#end()
 
 " ================ General Config ====================
 

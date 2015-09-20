@@ -65,11 +65,16 @@ export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Hom
 export JAVA_HOME=$JAVA7_HOME
 export ANDROID_HOME=$HOME/library/Android/sdk
 
+export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
+export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
+
 # Golang config
 export GOPATH=$HOME/Projects/learning/go
-#
+
 # Setting path variables
-export PATH=$PATH:$HOME/.rvm/bin:$GVM_ROOT:$GRADLE_HOME/bin:$SMALI:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/Programs/activator:$YESOD
+export PATH=$PATH:$DEX_2_JAR_HOME/bin
+export PATH=$PATH:$APKTOOL_HOME/bin
+export PATH=$PATH:$HOME/.rvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$JAVA_HOME
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
