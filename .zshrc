@@ -78,6 +78,7 @@ export PATH=$PATH:$HOME/.rvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tool
 export PATH=$PATH:$JAVA_HOME
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
+export PATH=$PATH:~/.local/bin
 
 export NVM_DIR="/Users/paulo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -101,3 +102,5 @@ function clear_containers() {
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
+
+source ~/.secrets
