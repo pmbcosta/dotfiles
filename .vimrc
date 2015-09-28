@@ -29,7 +29,6 @@ Plug 'dag/vim2hs'
 Plug 'flazz/vim-colorschemes'
 Plug 'tfnico/vim-gradle'
 Plug 'guns/vim-clojure-static'
-Plug 'ervandew/supertab'
 Plug 'lambdatoast/elm.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
@@ -46,6 +45,7 @@ Plug 'ahw/vim-pbcopy'
 Plug 'jimenezrick/vimerl'
 Plug 'suan/vim-instant-markdown'
 Plug 'tpope/vim-markdown'
+Plug 'eagletmt/neco-ghc'
 
 call plug#end()
 
@@ -186,9 +186,9 @@ set sidescroll=1
 syntax enable
 
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -232,8 +232,6 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-" let g:ycm_add_preview_to_completeopt = 0
-" let g:ycm_min_num_of_chars_for_completion = 1
-" let g:ycm_auto_trigger = 1
-" set completeopt-=preview
-
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
