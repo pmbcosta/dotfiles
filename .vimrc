@@ -29,7 +29,7 @@ Plug 'dag/vim2hs'
 Plug 'flazz/vim-colorschemes'
 Plug 'tfnico/vim-gradle'
 Plug 'guns/vim-clojure-static'
-Plug 'lambdatoast/elm.vim'
+Plug 'ElmCast/elm-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
@@ -235,3 +235,18 @@ let g:go_highlight_build_constraints = 1
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" Elm
+au FileType elm nmap <leader>b <Plug>(elm-make)
+au FileType elm nmap <leader>m <Plug>(elm-make-main)
+au FileType elm nmap <leader>t <Plug>(elm-test)
+au FileType elm nmap <leader>r <Plug>(elm-repl)
+au FileType elm nmap <leader>e <Plug>(elm-error-detail)
+au FileType elm nmap <leader>d <Plug>(elm-show-docs)
+au FileType elm nmap <leader>w <Plug>(elm-browse-docs)
+
+let g:elm_jump_to_error = 1
+let g:elm_make_output_file = "elm.html"
+let g:elm_make_show_warnings = 0
+let g:elm_browser_command = ""
+let g:elm_detailed_complete = 0
