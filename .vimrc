@@ -46,6 +46,7 @@ Plug 'jimenezrick/vimerl'
 Plug 'suan/vim-instant-markdown'
 Plug 'tpope/vim-markdown'
 Plug 'eagletmt/neco-ghc'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 

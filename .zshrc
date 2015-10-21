@@ -99,8 +99,14 @@ function clear_containers() {
   docker rm `docker ps --no-trunc -aq`
 }
 
+function gmclone() {
+ git clone git@github.com:greenmilellc-org/$1.git
+}
+
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
+alias em='elm-make'
+alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
 
 source ~/.secrets
