@@ -62,7 +62,7 @@ export YESOD=/Users/paulocosta/Library/Haskell/bin
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-export JAVA_HOME=$JAVA7_HOME
+export JAVA_HOME=$JAVA8_HOME
 export ANDROID_HOME=$HOME/Android
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
@@ -82,7 +82,7 @@ export PATH=$PATH:~/.local/bin
 
 # Docker Machine Virtualbox config
 
-export VIRTUALBOX_DISK_SIZE=20000
+export VIRTUALBOX_DISK_SIZE=80000
 export VIRTUALBOX_MEMORY_SIZE="4096"
 
 export NVM_DIR="/Users/paulo/.nvm"
@@ -105,7 +105,11 @@ function clear_containers() {
 }
 
 function gmclone() {
- git clone git@github.com:greenmilellc-org/$1.git
+  git clone git@github.com:greenmilellc-org/$1.git
+}
+
+function gmu() {
+  adb uninstall com.greenmile.android
 }
 
 alias d='docker'
@@ -113,5 +117,7 @@ alias dm='docker-machine'
 alias dc='docker-compose'
 alias em='elm-make'
 alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
+alias v="vagrant"
+alias ecs="ecs-cli"
 
 source ~/.secrets
