@@ -74,11 +74,12 @@ export GOPATH=$HOME/Projects/learning/go
 # Setting path variables
 export PATH=$PATH:$DEX_2_JAR_HOME/bin
 export PATH=$PATH:$APKTOOL_HOME/bin
-export PATH=$PATH:$HOME/.rvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/ndk-bundle
 export PATH=$PATH:$JAVA_HOME
-export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/Users/paulocosta/Projects/Freela/chat-env/cli
 
 # Docker Machine Virtualbox config
 
@@ -96,6 +97,10 @@ function dssh() {
   docker exec -it $1 /bin/bash
 }
 
+function dtail() {
+  docker logs -f $1
+}
+
 function dmev() {
   eval $(docker-machine env $1)
 }
@@ -110,6 +115,28 @@ function gmclone() {
 
 function gmu() {
   adb uninstall com.greenmile.android
+}
+
+function gmdb() {
+  adb pull data/data/com.greenmile.android/databases/greenmile.db ~/greenmile.db
+  sqlite3 ~/greenmile.db
+}
+
+function gmdb2() {
+  adb shell am broadcast -a com.greenmile.android.COPY_DATABASE
+  adb pull /sdcard/database/greenmile.db ~/greenmile.db
+  sqlite3 ~/greenmile.db
+}
+
+function dmaws() {
+  echo 'creating machine with name $1'
+  docker-machine -D create \
+    --driver amazonec2 \
+    --amazonec2-access-key $AWS_ACCESS_KEY_ID \
+    --amazonec2-secret-key $AWS_SECRET_ACCESS_KEY \
+    --amazonec2-vpc-id $AWS_VPC_ID \
+    --amazonec2-zone b \
+    $1
 }
 
 alias d='docker'

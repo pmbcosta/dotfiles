@@ -122,7 +122,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+" set list listchars=tab:\ \ ,trail:·
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -251,3 +251,8 @@ let g:elm_make_output_file = "elm.html"
 let g:elm_make_show_warnings = 0
 let g:elm_browser_command = ""
 let g:elm_detailed_complete = 0
+
+hi SpecialKey ctermbg=NONE guibg=NONE
+
+" Removes the annoying scratch window
+set completeopt-=preview
