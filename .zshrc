@@ -86,6 +86,8 @@ export PATH=$PATH:/Users/paulocosta/Projects/Freela/chat-env/cli
 export VIRTUALBOX_DISK_SIZE=80000
 export VIRTUALBOX_MEMORY_SIZE="4096"
 
+export EJABBERD_HOST=192.168.25.26
+
 export NVM_DIR="/Users/paulo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
