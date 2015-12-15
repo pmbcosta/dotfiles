@@ -100,7 +100,7 @@ function dssh() {
 }
 
 function dtail() {
-  docker logs -f $1
+  docker logs -f -t=true --tail=300 $1
 }
 
 function dmev() {
