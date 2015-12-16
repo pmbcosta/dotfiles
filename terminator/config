@@ -1,0 +1,23 @@
+[global_config]
+  title_transmit_bg_color = "#2f3755"
+[keybindings]
+  new_tab = <Primary>t
+  next_tab = <Shift><Alt>l
+  prev_tab = <Shift><Alt>h
+[profiles]
+  [[default]]
+    background_image = None
+    custom_command = env TERM=xterm-256color zsh
+    foreground_color = "#839496"
+    use_custom_command = True
+    background_color = "#002b36"
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
