@@ -141,6 +141,11 @@ function dmaws() {
     $1
 }
 
+function restart_adb() {
+  adb kill-server
+  adb start-server
+}
+
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
@@ -148,5 +153,6 @@ alias em='elm-make'
 alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
 alias v="vagrant"
 alias ecs="ecs-cli"
+alias vim=nvim
 
 source ~/.secrets
