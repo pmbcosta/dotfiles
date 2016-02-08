@@ -27,11 +27,14 @@ values."
      ;; better-defaults
      (auto-completion :variables auto-completion-enable-snippets-in-popup t auto-completion-enable-sort-by-usage t)
      emacs-lisp
-     typescript
+     react
      elm
+     html
      haskell
      scala
      typescript
+     javascript
+     python
      git
      clojure
      markdown
@@ -40,6 +43,8 @@ values."
      ranger
      unimpaired
      fasd
+     yaml
+     dockerfile
      (shell :variables shell-default-shell 'eshell)
      ;; org
      ;; (shell :variables
@@ -246,6 +251,10 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
+  (setq-default
+
+   ;;Ranger
+   ranger-override-dired t)
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
@@ -260,3 +269,17 @@ layers configuration. You are free to put any user code."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(magit-fetch-arguments nil)
+ '(paradox-github-token t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
