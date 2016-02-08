@@ -168,10 +168,14 @@ map <Leader><Leader> gc
 nmap <Leader>n :NERDTreeTabsToggle<CR>
 
 " Window navigation 
-nmap <Leader>h <C-W><C-H>
-nmap <Leader>j <C-W><C-J>
-nmap <Leader>l <C-W><C-L>
-nmap <Leader>k <C-W><C-K>
+:tnoremap <Leader>h <C-\><C-n><C-w>h
+:tnoremap <Leader>j <C-\><C-n><C-w>j
+:tnoremap <Leader>k <C-\><C-n><C-w>k
+:tnoremap <Leader>l <C-\><C-n><C-w>l
+:nnoremap <Leader>h <C-w>h
+:nnoremap <Leader>j <C-w>j
+:nnoremap <Leader>k <C-w>k
+:nnoremap <Leader>l <C-w>l
 
 " Leader-e to evaluate Clojure expression
 map <Leader>e :Eval<CR>
