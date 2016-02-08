@@ -167,14 +167,18 @@ map <Leader><Leader> gc
 " Toggle NerdTreeTabsToggle With /n
 nmap <Leader>n :NERDTreeTabsToggle<CR>
 
-" Leader-M to next window
-nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
+" Window navigation 
+nmap <Leader>h <C-W><C-H>
+nmap <Leader>j <C-W><C-J>
+nmap <Leader>l <C-W><C-L>
+nmap <Leader>k <C-W><C-K>
 
 " Leader-e to evaluate Clojure expression
 map <Leader>e :Eval<CR>
 
 " Leader-s to save files
 map <Leader>s :w<CR>
+
 
 " ================ Scrolling ================================
 
