@@ -25,7 +25,12 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
-     (auto-completion :variables auto-completion-enable-snippets-in-popup t auto-completion-enable-sort-by-usage t)
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-help-tooltip t)
+     ;; (syntax-checking :variables
+     ;;                  syntax-checking-enable-tooltips nil)
      emacs-lisp
      react
      elm
@@ -265,6 +270,14 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-elm))
+  (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+  (add-hook 'elm-mode-hook
+            (lambda ()
+              (setq company-backends '(company-elm))))
+  (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+  (add-hook 'elm-mode-hook 'auto-complete-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
