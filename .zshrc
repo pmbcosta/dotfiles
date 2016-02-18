@@ -2,24 +2,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="nebirhos"
 ZSH_THEME="mh"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment following line if you want to  shown in the command execution time stamp 
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
@@ -95,8 +81,12 @@ export GO15VENDOREXPERIMENT=1
 
 # Helper functions
 
-function dssh() {
+function dbash() {
   docker exec -it $1 /bin/bash
+}
+
+function dzsh() {
+  docker exec -it $1 /bin/zsh
 }
 
 function dtail() {
@@ -146,6 +136,8 @@ function restart_adb() {
   adb start-server
 }
 
+alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome_dev_sesion1 --disable-web-security"
+
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
@@ -156,3 +148,5 @@ alias ecs="ecs-cli"
 alias vim=nvim
 
 source ~/.secrets
+source /usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
