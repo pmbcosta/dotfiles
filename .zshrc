@@ -136,6 +136,10 @@ function restart_adb() {
   adb start-server
 }
 
+function emake() {
+    elm make $1 --output elm.html
+}
+
 alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome_dev_sesion1 --disable-web-security"
 
 alias d='docker'
