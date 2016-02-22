@@ -50,6 +50,7 @@ values."
      fasd
      yaml
      dockerfile
+     themes-megapack
      (shell :variables shell-default-shell 'eshell)
      ;; org
      ;; (shell :variables
@@ -118,12 +119,12 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          solarized-dark
-                         solarized-light
-                         spacemacs-dark
-                         spacemacs-light
-                         leuven
-                         monokai
-                         zenburn)
+                         brin
+                         darktooth
+                         deeper-blue
+                         firebelly
+                         gotham
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
