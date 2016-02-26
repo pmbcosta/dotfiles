@@ -29,8 +29,6 @@ values."
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t)
-     ;; (syntax-checking :variables
-     ;;                  syntax-checking-enable-tooltips nil)
      emacs-lisp
      react
      elm
@@ -50,6 +48,7 @@ values."
      fasd
      yaml
      dockerfile
+     ansible
      themes-megapack
      (shell :variables shell-default-shell 'eshell)
      ;; org
@@ -118,9 +117,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         darktooth
                          solarized-dark
                          brin
-                         darktooth
                          deeper-blue
                          firebelly
                          gotham
