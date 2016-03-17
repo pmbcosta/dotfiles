@@ -48,14 +48,15 @@ export YESOD=/Users/paulocosta/Library/Haskell/bin
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-export JAVA_HOME=$JAVA8_HOME
+#export JAVA_HOME=$JAVA8_HOME
+export JAVA_HOME=$JAVA7_HOME
 export ANDROID_HOME=$HOME/Android
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 
 # Golang config
-export GOPATH=$HOME/Projects/learning/go
+export GOPATH=/Users/paulocosta/Projects/Learning/learning/go
 
 # Setting path variables
 export PATH=$PATH:$DEX_2_JAR_HOME/bin
@@ -154,3 +155,5 @@ alias vim=nvim
 source ~/.secrets
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

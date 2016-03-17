@@ -32,6 +32,7 @@ values."
      emacs-lisp
      react
      elm
+     ;; (elm :variables elm-indent-mode f)
      html
      haskell
      scala
@@ -257,7 +258,6 @@ values."
 
 (defun dotspacemacs/user-init ()
   (setq-default
-
    ;;Ranger
    ranger-override-dired t)
   "Initialization function for user code.
