@@ -2,8 +2,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="mh"
-
+ZSH_THEME="mh" 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -47,9 +46,8 @@ export YESOD=/Users/paulocosta/Library/Haskell/bin
 
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-#export JAVA_HOME=$JAVA8_HOME
-export JAVA_HOME=$JAVA7_HOME
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
+export JAVA_HOME=$JAVA8_HOME
 export ANDROID_HOME=$HOME/Android
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
@@ -150,7 +148,6 @@ alias em='elm-make'
 alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
 alias v="vagrant"
 alias ecs="ecs-cli"
-alias vim=nvim
 
 source ~/.secrets
 source /usr/local/bin/virtualenvwrapper.sh
