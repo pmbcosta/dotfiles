@@ -270,14 +270,21 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (with-eval-after-load 'company
-    (add-to-list 'company-backends 'company-elm))
+  ;; (with-eval-after-load 'company
+  ;;   (add-to-list 'company-backends 'company-elm))
+  ;; (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+  ;; (add-hook 'elm-mode-hook
+  ;;           (lambda ()
+  ;;             (setq company-backends '(company-elm))))
+  ;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+  ;; (add-hook 'elm-mode-hook 'auto-complete-mode)
+  (setq-default
+   evil-shift-width 2)
+
+  (setq
+   elm-indent-offset 2
+   spacemacs-indent-sensitive-modes (add-to-list 'spacemacs-indent-sensitive-modes 'elm-mode))
   (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
-  (add-hook 'elm-mode-hook
-            (lambda ()
-              (setq company-backends '(company-elm))))
-  (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-  (add-hook 'elm-mode-hook 'auto-complete-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
