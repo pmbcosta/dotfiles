@@ -56,6 +56,9 @@ export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 # Golang config
 export GOPATH=/Users/paulocosta/Projects/Learning/learning/go
 
+# Anaconda
+export ANACONDA=/Users/paulocosta/anaconda2/bin
+
 # Setting path variables
 export PATH=$PATH:$DEX_2_JAR_HOME/bin
 export PATH=$PATH:$APKTOOL_HOME/bin
@@ -65,6 +68,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/Users/paulocosta/Projects/Freela/chat-env/cli
+export PATH=$PATH:$ANACONDA
 
 # Docker Machine Virtualbox config
 
@@ -138,6 +142,10 @@ function restart_adb() {
 function emake() {
     elm make $1 --output elm.html
 }
+
+function docker_debug() {
+  docker run --rm -it $1 bash -il
+} 
 
 alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome_dev_sesion1 --disable-web-security"
 
