@@ -156,9 +156,16 @@ alias em='elm-make'
 alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
 alias v="vagrant"
 alias ecs="ecs-cli"
+alias k="kubectl"
 
 source ~/.secrets
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/paulocosta/Programs/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/paulocosta/Programs/google-cloud-sdk/completion.zsh.inc'
