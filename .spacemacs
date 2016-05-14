@@ -32,13 +32,13 @@ values."
      emacs-lisp
      react
      elm
-     ;; (elm :variables elm-indent-mode f)
      html
      haskell
      scala
      typescript
      javascript
      python
+     ipython-notebook
      git
      clojure
      markdown
