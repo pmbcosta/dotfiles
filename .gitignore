@@ -64,9 +64,6 @@ gen-external-apklibs/
 
 #----- Gradle -------
 .gradle
-gradlew
-gradlew.bat
-/*/gradle/
 /*/local.properties
 /*/out
 /*/*/build
