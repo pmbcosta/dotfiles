@@ -41,6 +41,7 @@ values."
      ipython-notebook
      git
      clojure
+     go
      markdown
      eyebrowse
      org
@@ -229,7 +230,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -253,7 +254,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup all
    ))
 
 (defun dotspacemacs/user-init ()
@@ -270,14 +271,7 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  ;; (with-eval-after-load 'company
-  ;;   (add-to-list 'company-backends 'company-elm))
-  ;; (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
-  ;; (add-hook 'elm-mode-hook
-  ;;           (lambda ()
-  ;;             (setq company-backends '(company-elm))))
-  ;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-  ;; (add-hook 'elm-mode-hook 'auto-complete-mode)
+  (add-hook 'elm-mode-hook (lambda() (elm-indent-mode nil)))
   (setq-default
    evil-shift-width 2)
 
@@ -294,6 +288,7 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(electric-indent-mode nil)
  '(magit-fetch-arguments nil)
  '(paradox-github-token t))
 (custom-set-faces
