@@ -48,6 +48,10 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
+Plug 'fsharp/vim-fsharp', {
+      \ 'for': 'fsharp',
+      \ 'do':  'make fsautocomplete',
+      \}
 
 
 call plug#end()

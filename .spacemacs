@@ -52,6 +52,9 @@ values."
      dockerfile
      ansible
      themes-megapack
+     fsharp
+     elixir
+     java
      (shell :variables shell-default-shell 'eshell)
      ;; org
      ;; (shell :variables
@@ -119,8 +122,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         darktooth
                          solarized-dark
+                         darktooth
                          brin
                          deeper-blue
                          firebelly
@@ -272,6 +275,7 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (add-hook 'elm-mode-hook (lambda() (elm-indent-mode nil)))
+  ;; (add-hook 'elixir-mode-hook (lambda() (auto-completion-enable-snippets-in-popup nil)))
   (setq-default
    evil-shift-width 2)
 
@@ -279,6 +283,12 @@ layers configuration. You are free to put any user code."
    elm-indent-offset 2
    spacemacs-indent-sensitive-modes (add-to-list 'spacemacs-indent-sensitive-modes 'elm-mode))
   (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+  (eval-after-load "alchemist"
+    '(defun alchemist-company--wait-for-doc-buffer ()
+       (setf num 50)
+       (while (and (not alchemist-company-doc-lookup-done)
+                   (> (decf num) 1))
+         (sit-for 0.01))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

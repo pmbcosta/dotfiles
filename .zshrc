@@ -82,7 +82,6 @@ export EJABBERD_HOST=192.168.99.100
 export NVM_DIR="/Users/paulo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export GO15VENDOREXPERIMENT=1
 export GCLOUD_PROJECT=nifty-time-131012
 
 # Helper functions
@@ -203,6 +202,17 @@ function ksrv {
   kubectl get services
 }
 
+function java_new_gradle {
+  gradle init --type java-library
+}
+
+function java_new_maven {
+    mvn -B archetype:generate \
+        -DarchetypeGroupId=org.apache.maven.archetypes \
+        -DgroupId=com.mycompany.app \
+        -DartifactId=my-app
+}
+
 function ecr_k8s_update_login() {
 #ecr_login
 cat > /tmp/image-pull-secret.yaml << EOF 
@@ -227,7 +237,7 @@ alias v="vagrant"
 alias ecs="ecs-cli"
 alias k="kubectl"
 alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
-alias vim="/usr/local/Cellar/vim/7.4.1864_1/bin/vim"
+alias vim="/usr/local/Cellar/vim/7.4.1952/bin/vim"
 
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
