@@ -47,6 +47,7 @@ Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'jalvesaq/Nvim-R'
 
 call plug#end()
 

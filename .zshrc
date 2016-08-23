@@ -46,6 +46,9 @@ set -o vi
 # Yesod
 export YESOD=/Users/paulocosta/Library/Haskell/bin
 
+# ghc-mod
+export cabal_helper_libexecdir=/Users/paulocosta/.stack/snapshots/x86_64-osx/lts-6.11/7.10.3/libexec
+
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
@@ -56,7 +59,7 @@ export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 
 # Golang config
-export GOPATH=/Users/paulocosta/Projects/Learning/learning/go
+export GOPATH=/Users/paulocosta/Projects/Learning/learning/golang
 
 # Anaconda
 export ANACONDA=/Users/paulocosta/anaconda2/bin
@@ -71,6 +74,8 @@ export PATH=$PATH:/usr/local/opt/ejabberd/sbin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/Users/paulocosta/Projects/Freela/chat-env/cli
 export PATH=$PATH:$ANACONDA
+# Julia
+export PATH=$PATH:/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin
 
 # Docker Machine Virtualbox config
 
@@ -237,7 +242,7 @@ alias v="vagrant"
 alias ecs="ecs-cli"
 alias k="kubectl"
 alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
-alias vim="/usr/local/Cellar/vim/7.4.1952/bin/vim"
+#alias vim="/usr/local/Cellar/vim/7.4.2109/bin/vim"
 
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
@@ -249,3 +254,4 @@ source '/Users/paulocosta/Programs/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/paulocosta/Programs/google-cloud-sdk/completion.zsh.inc'
+export PATH="/usr/local/sbin:$PATH"
