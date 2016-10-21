@@ -52,7 +52,7 @@ export cabal_helper_libexecdir=/Users/paulocosta/.stack/snapshots/x86_64-osx/lts
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
-export JAVA_HOME=$JAVA8_HOME
+export JAVA_HOME=$JAVA7_HOME
 export ANDROID_HOME=$HOME/Android
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
@@ -79,7 +79,7 @@ export PATH=$PATH:/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin
 
 # Docker Machine Virtualbox config
 
-export VIRTUALBOX_DISK_SIZE=20000
+export VIRTUALBOX_DISK_SIZE=50000
 export VIRTUALBOX_MEMORY_SIZE="4096"
 
 export EJABBERD_HOST=192.168.99.100
@@ -93,6 +93,10 @@ export GCLOUD_PROJECT=nifty-time-131012
 
 function dbash() {
   docker exec -it $1 /bin/bash
+}
+
+function dmip() {
+  docker-machine ip $1 | pbcopy
 }
 
 function dzsh() {
@@ -232,7 +236,7 @@ EOF
 #kubectl --kubeconfig="$AWS_KUBE_CONFIG" $1 -f /tmp/image-pull-secret.yaml
 }
 
-alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome_dev_sesion1 --disable-web-security"
+alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=/tmp/chrome_dev_sesion1 "
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
