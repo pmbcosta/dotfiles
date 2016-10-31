@@ -52,7 +52,7 @@ export cabal_helper_libexecdir=/Users/paulocosta/.stack/snapshots/x86_64-osx/lts
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
-export JAVA_HOME=$JAVA7_HOME
+export JAVA_HOME=$JAVA8_HOME
 export ANDROID_HOME=$HOME/Android
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
@@ -246,7 +246,8 @@ alias v="vagrant"
 alias ecs="ecs-cli"
 alias k="kubectl"
 alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
-#alias vim="/usr/local/Cellar/vim/7.4.2109/bin/vim"
+alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{.Names}})); sleep 0.1; clear; echo "$TEXT"; done'
+alias vim=/usr/local/Cellar/vim/8.0.0046/bin/vim
 
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
