@@ -31,12 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.secrets
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Vim as default editor
 export EDITOR='vim'
 
@@ -82,8 +76,6 @@ export PATH=$PATH:/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin
 export VIRTUALBOX_DISK_SIZE=50000
 export VIRTUALBOX_MEMORY_SIZE="4096"
 
-export EJABBERD_HOST=192.168.99.100
-
 export NVM_DIR="/Users/paulo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -115,6 +107,10 @@ function clear_containers() {
   docker rm `docker ps --no-trunc -aq`
 }
 
+function clear_images() {
+  docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+}
+
 function gmclone() {
   git clone git@github.com:greenmilellc-org/$1.git
 }
@@ -135,14 +131,14 @@ function gmdb2() {
 }
 
 function dmaws() {
-  echo 'creating machine with name $1'
-  docker-machine -D create \
-    --driver amazonec2 \
+  docker-machine create --driver amazonec2 \
+    --amazonec2-region "us-east-1" \
+    --amazonec2-instance-type $DOCKER_MACHINE_INSTANCE \
     --amazonec2-access-key $AWS_ACCESS_KEY_ID \
     --amazonec2-secret-key $AWS_SECRET_ACCESS_KEY \
-    --amazonec2-vpc-id $AWS_VPC_ID \
-    --amazonec2-zone b \
-    $1
+    --amazonec2-security-group $DOCKER_MACHINE_SG \
+    --amazonec2-zone "b" \
+    --amazonec2-vpc-id $DOCKER_MACHINE_VPC_ID $1
 }
 
 function restart_adb() {
@@ -172,7 +168,7 @@ function gcloud_pbcopy() {
 
 function ecr_pbcopy() {
   echo "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$1:$2" | pbcopy
-} 
+}
 
 function kbash() {
   kubectl exec -it $1 -c $2 /bin/bash
@@ -222,10 +218,13 @@ function java_new_maven {
         -DartifactId=my-app
 }
 
+function gmpip {
+  zsh -c "pip install git+https://github.com/greenmilellc-org/$1.git#subdirectory=$2"
+}
+
 function ecr_k8s_update_login() {
-#ecr_login
-cat > /tmp/image-pull-secret.yaml << EOF 
-apiVersion: v1     
+cat > /tmp/image-pull-secret.yaml << EOF
+apiVersion: v1
 kind: Secret
 metadata:
   name: myregistrykey
@@ -233,7 +232,22 @@ data:
   .dockerconfigjson: $(echo -n $(cat ~/.docker/config.json | base64 | sed ':a;N;$!ba;s/\n/ /g'))
 type: kubernetes.io/dockerconfigjson
 EOF
-#kubectl --kubeconfig="$AWS_KUBE_CONFIG" $1 -f /tmp/image-pull-secret.yaml
+}
+
+function cordova_add_plugin() {
+  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#:/$1/ --save
+}
+
+function cordova_add_plugin_base() {
+  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#:/$1/ --save
+}
+
+function cordova_add_plugin_branch() {
+  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#$1:/$2/ --save
+}
+
+function ideadiff() {
+  /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea diff $1 $2
 }
 
 alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=/tmp/chrome_dev_sesion1 "
@@ -247,7 +261,8 @@ alias ecs="ecs-cli"
 alias k="kubectl"
 alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
 alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{.Names}})); sleep 0.1; clear; echo "$TEXT"; done'
-alias vim=/usr/local/Cellar/vim/8.0.0046/bin/vim
+alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
+alias dbx='dbxcli'
 
 source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
@@ -255,7 +270,7 @@ export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/paulocosta/Programs/google-cloud-sdk/path.zsh.inc'
+# source '/Users/paulocosta/Programs/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/paulocosta/Programs/google-cloud-sdk/completion.zsh.inc'
