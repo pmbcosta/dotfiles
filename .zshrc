@@ -111,25 +111,6 @@ function clear_images() {
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 }
 
-function gmclone() {
-  git clone git@github.com:greenmilellc-org/$1.git
-}
-
-function gmu() {
-  adb uninstall com.greenmile.android
-}
-
-function gmdb() {
-  adb pull data/data/com.greenmile.android/databases/greenmile.db ~/greenmile.db
-  sqlite3 ~/greenmile.db
-}
-
-function gmdb2() {
-  adb shell am broadcast -a com.greenmile.android.COPY_DATABASE
-  adb pull /sdcard/database/greenmile.db ~/greenmile.db
-  sqlite3 ~/greenmile.db
-}
-
 function dmaws() {
   docker-machine create --driver amazonec2 \
     --amazonec2-region "us-east-1" \
@@ -218,10 +199,6 @@ function java_new_maven {
         -DartifactId=my-app
 }
 
-function gmpip {
-  zsh -c "pip install git+https://github.com/greenmilellc-org/$1.git#subdirectory=$2"
-}
-
 function ecr_k8s_update_login() {
 cat > /tmp/image-pull-secret.yaml << EOF
 apiVersion: v1
@@ -232,18 +209,6 @@ data:
   .dockerconfigjson: $(echo -n $(cat ~/.docker/config.json | base64 | sed ':a;N;$!ba;s/\n/ /g'))
 type: kubernetes.io/dockerconfigjson
 EOF
-}
-
-function cordova_add_plugin() {
-  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#:/$1/ --save
-}
-
-function cordova_add_plugin_base() {
-  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#:/$1/ --save
-}
-
-function cordova_add_plugin_branch() {
-  cordova plugin add https://github.com/greenmilellc-org/gm-driverjs-plugins.git\#$1:/$2/ --save
 }
 
 function ideadiff() {
@@ -264,7 +229,6 @@ alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
 alias dbx='dbxcli'
 
-source /usr/local/bin/virtualenvwrapper.sh
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
