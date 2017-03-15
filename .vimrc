@@ -13,6 +13,19 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 " Haskell
+Plug 'eagletmt/ghcmod-vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Required by ghcmod-vim
+Plug 'eagletmt/neco-ghc'
+" Snipmate & deps
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+" Autocompletion
+Plug 'Shougo/neocomplete.vim'
+" Fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
+" Use tab for insert completion
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -131,3 +144,6 @@ set sidescrolloff=15
 set sidescroll=1
 
 " ================ Custom Settings =========================
+
+" Enable neocomplete at startup
+let g:neocomplete#enable_at_startup = 1
