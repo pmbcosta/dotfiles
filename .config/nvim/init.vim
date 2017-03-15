@@ -12,42 +12,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'kien/ctrlp.vim'
-Plug 'moll/vim-node'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tomtom/tcomment_vim'
-Plug 'dag/vim2hs'
 Plug 'flazz/vim-colorschemes'
-Plug 'tfnico/vim-gradle'
-Plug 'guns/vim-clojure-static'
-Plug 'ElmCast/elm-vim'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'chase/vim-ansible-yaml'
-Plug 'fatih/vim-go'
-Plug 'eapache/rainbow_parentheses.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-fireplace'
-Plug 'SirVer/ultisnips'
-Plug 'ahw/vim-pbcopy'
-Plug 'jimenezrick/vimerl'
-Plug 'suan/vim-instant-markdown'
-Plug 'tpope/vim-markdown'
-Plug 'eagletmt/neco-ghc'
-Plug 'kchmck/vim-coffee-script'
-Plug 'Shougo/neosnippet.vim'
-Plug 'ervandew/supertab'
-Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'jalvesaq/Nvim-R'
 
 call plug#end()
 
@@ -163,10 +128,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " Bind leader-leader to tcomment
-map <Leader><Leader> gc
-
-" Toggle NerdTreeTabsToggle With /n
-nmap <Leader>n :NERDTreeTabsToggle<CR>
+" map <Leader><Leader> gc
 
 " Window navigation 
 :nnoremap <Leader>h <C-\><C-n><C-w>h
@@ -177,9 +139,6 @@ nmap <Leader>n :NERDTreeTabsToggle<CR>
 :nnoremap <Leader>j <C-w>j
 :nnoremap <Leader>k <C-w>k
 :nnoremap <Leader>l <C-w>l
-
-" Leader-e to evaluate Clojure expression
-map <Leader>e :Eval<CR>
 
 " Leader-s to save files
 map <Leader>s :w<CR>
@@ -194,90 +153,3 @@ set sidescroll=1
 " ================ Custom Settings =========================
 
 syntax enable
-
-" make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-" let g:UltiSnipsExpandTrigger = "<tab>"
-" let g:UltiSnipsJumpForwardTrigger = "<tab>"
-" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-"Rainbow parentheses
-
-let g:rbpt_colorpairs = [
-    \ ['red',         'RoyalBlue3'],
-    \ ['brown',       'SeaGreen3'],
-    \ ['blue',        'DarkOrchid3'],
-    \ ['gray',        'firebrick3'],
-    \ ['green',       'RoyalBlue3'],
-    \ ['magenta',     'SeaGreen3'],
-    \ ['cyan',        'DarkOrchid3'],
-    \ ['darkred',     'firebrick3'],
-    \ ['brown',       'RoyalBlue3'],
-    \ ['darkblue',    'DarkOrchid3'],
-    \ ['gray',        'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkmagenta', 'SeaGreen3'],
-    \ ['darkcyan',    'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-
-let g:rbpt_max = 15
-let g:rbpt_loadcmd_toggle = 0
-let g:bold_parentheses = 1  " Default on
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" vim-go 
-
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-" Elm
-
-au FileType elm nmap <leader>b <Plug>(elm-make)
-au FileType elm nmap <leader>m <Plug>(elm-make-main)
-au FileType elm nmap <leader>t <Plug>(elm-test)
-au FileType elm nmap <leader>r <Plug>(elm-repl)
-au FileType elm nmap <leader>e <Plug>(elm-error-detail)
-au FileType elm nmap <leader>d <Plug>(elm-show-docs)
-au FileType elm nmap <leader>w <Plug>(elm-browse-docs)
-
-let g:elm_jump_to_error = 1
-let g:elm_make_output_file = "elm.html"
-let g:elm_make_show_warnings = 0
-let g:elm_browser_command = ""
-let g:elm_detailed_complete = 0
-
-hi SpecialKey ctermbg=NONE guibg=NONE
-
-" Removes the annoying scratch window
-set completeopt-=preview
-
-" Supertab
-
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-" neco-gch
-let g:necoghc_debug = 1
-
-" Disable haskell-vim omnifunc
-let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
