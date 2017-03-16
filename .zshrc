@@ -224,6 +224,8 @@ alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
 alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{.Names}})); sleep 0.1; clear; echo "$TEXT"; done'
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
 alias dbx='dbxcli'
+alias vim='nvim'
+alias sa='source activate dev-env'
 
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 
