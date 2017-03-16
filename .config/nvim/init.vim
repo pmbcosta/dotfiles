@@ -199,3 +199,6 @@ endfunction
 
 " Command to edit init.vim
 command EVim execute ":e ~/.config/nvim/init.vim"
+
+" Makes Ctrl-P consider a folder that has a .project file a project
+let g:ctrlp_root_markers = ['.project']
