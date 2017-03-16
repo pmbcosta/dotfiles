@@ -12,7 +12,25 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Colors cause moar pretty
 Plug 'flazz/vim-colorschemes'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+" Haskell
+Plug 'eagletmt/ghcmod-vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Required by ghcmod-vim
+Plug 'eagletmt/neco-ghc'
+" Snipmate & deps
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+" Autocompletion
+Plug 'Shougo/deoplete.nvim'
+" Fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
+" Tab for autocomplete
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -153,3 +171,10 @@ set sidescroll=1
 " ================ Custom Settings =========================
 
 syntax enable
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" Haskell autocomplete
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
