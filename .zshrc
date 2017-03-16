@@ -226,6 +226,7 @@ alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
 alias dbx='dbxcli'
 alias vim='nvim'
 alias sa='source activate dev-env'
+alias evim='vim ~/.config/nvim/init.vim'
 
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 
