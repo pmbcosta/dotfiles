@@ -15,8 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Colors cause moar pretty
 Plug 'flazz/vim-colorschemes'
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
 " Haskell
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Required by ghcmod-vim
