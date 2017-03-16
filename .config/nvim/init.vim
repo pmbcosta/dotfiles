@@ -30,6 +30,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'ctrlpvim/ctrlp.vim'
 " Tab for autocomplete
 Plug 'ervandew/supertab'
+" Ack integration
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -157,6 +159,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 :nnoremap <Leader>k <C-w>k
 :nnoremap <Leader>l <C-w>l
 
+:nnoremap <Leader>j <C-j>
+:nnoremap <Leader>k <C-k>
+
 " Leader-s to save files
 map <Leader>s :w<CR>
 
@@ -177,3 +182,20 @@ let g:deoplete#enable_at_startup = 1
 " Haskell autocomplete
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" Z - swith to recent / frequent directories
+command! -nargs=* Z :call Z(<f-args>)
+function! Z(...)
+  let cmd = 'fasd -d -e printf'
+  for arg in a:000
+    let cmd = cmd . ' ' . arg
+  endfor
+  let path = system(cmd)
+  if isdirectory(path)
+    echo path
+    exec 'cd ' . path
+  endif
+endfunction
+
+" Command to edit init.vim
+command EVim execute ":e ~/.config/nvim/init.vim"
