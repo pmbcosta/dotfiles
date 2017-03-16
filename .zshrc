@@ -40,9 +40,6 @@ set -o vi
 # Yesod
 export YESOD=/Users/paulocosta/Library/Haskell/bin
 
-# ghc-mod
-export cabal_helper_libexecdir=/Users/paulocosta/.stack/snapshots/x86_64-osx/lts-6.11/7.10.3/libexec
-
 # Java & Android config
 export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
@@ -80,8 +77,6 @@ export NVM_DIR="/Users/paulo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GCLOUD_PROJECT=nifty-time-131012
-
-# Helper functions
 
 function dbash() {
   docker exec -it $1 /bin/bash
@@ -219,6 +214,7 @@ alias chrome_unsecure="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ 
 alias d='docker'
 alias dm='docker-machine'
 alias dc='docker-compose'
+alias c='docker container'
 alias em='elm-make'
 alias ruby='/usr/local/Cellar/ruby/2.2.3/bin/ruby'
 alias v="vagrant"
@@ -239,3 +235,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # The next line enables shell command completion for gcloud.
 source '/Users/paulocosta/Programs/google-cloud-sdk/completion.zsh.inc'
 export PATH="/usr/local/sbin:$PATH"
+eval $(/usr/libexec/path_helper -s)
