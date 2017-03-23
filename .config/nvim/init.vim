@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Colors cause moar pretty
 Plug 'flazz/vim-colorschemes'
+Plug 'mhartington/oceanic-next'
 " Markdown
 Plug 'gabrielelana/vim-markdown'
 " Haskell
@@ -32,11 +33,20 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 " Ack integration
 Plug 'mileszs/ack.vim'
+" comments
+Plug 'tpope/vim-commentary'
+" Elixir Support
+Plug 'slashmili/alchemist.vim'
+Plug 'elixir-lang/vim-elixir'
+
 
 call plug#end()
 
 " ================ General Config ====================
 
+set path+=**path                " Sets the path as the current directory and 
+                                " Its subfolders
+                                
 set number                      "Line numbers are good
 set incsearch                   "Incremental search
 set hlsearch                    "Highlight search
@@ -58,17 +68,24 @@ set hidden
 
 " Gruvbox Theme Configuration
 " colorscheme gruvbox
-" set background=dark
-" syntax on
-"
+set background=dark
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
 " if !has("gui_running")
 "  let g:gruvbox_italic=0
 " endif
 
-" colorscheme gruvbox
 " colorscheme xterm16
-" colorscheme inkpot
-colorscheme up
+" colorscheme up
+" colorscheme Monokai
+" colorscheme badwolf
+" colorscheme solarized
+" colorscheme xoria256
+colorscheme OceanicNext
+
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
@@ -137,6 +154,9 @@ set wildignore+=*/bin/**
 set wildignore+=*/gen/**
 set wildignore+=*/target/**
 
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
 " ================ Custom Mappings========================
 
 " Disable arrow keys
@@ -146,8 +166,8 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Bind leader-leader to tcomment
-" map <Leader><Leader> gc
+" Bind leader-leader to comment
+map <Leader><Leader> gc
 
 " Window navigation 
 :nnoremap <Leader>h <C-\><C-n><C-w>h
@@ -165,6 +185,8 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Leader-s to save files
 map <Leader>s :w<CR>
 
+" Copies into os register
+vnoremap <Leader>y "+y
 
 " ================ Scrolling ================================
 
@@ -199,6 +221,9 @@ endfunction
 
 " Command to edit init.vim
 command EVim execute ":e ~/.config/nvim/init.vim"
+
+" Command to create the 'tags' file
+command! MakeTags !ctags -R .
 
 " Makes Ctrl-P consider a folder that has a .project file a project
 let g:ctrlp_root_markers = ['.project']
