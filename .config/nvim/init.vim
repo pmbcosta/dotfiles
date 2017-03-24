@@ -21,10 +21,15 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Required by ghcmod-vim
 Plug 'eagletmt/neco-ghc'
-" Snipmate & deps
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<C-I>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
 " Fuzzy finder
@@ -38,6 +43,15 @@ Plug 'tpope/vim-commentary'
 " Elixir Support
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-lang/vim-elixir'
+" Python
+Plug 'davidhalter/jedi'
+Plug 'zchee/deoplete-jedi'
+" Javascript
+Plug 'pangloss/vim-javascript'
+" NERDTree
+Plug 'scrooloose/nerdtree'
+" Misc
+Plug 'powerman/vim-plugin-AnsiEsc'
 
 
 call plug#end()
@@ -94,6 +108,8 @@ colorscheme OceanicNext
 let mapleader=","
 
 let loaded_matchparen = 1 " Disable Highlighting of matching parens
+
+" set completeopt-=preview "Dont' show scratch buffers
 
 " ================ Turn Off Swap Files ==============
 
@@ -187,6 +203,12 @@ map <Leader>s :w<CR>
 
 " Copies into os register
 vnoremap <Leader>y "+y
+
+" Pastes from os register
+nnoremap <Leader>p "+p
+
+" Opens NERDTree
+nnoremap <Leader>t :NERDTreeToggle<CR>
 
 " ================ Scrolling ================================
 
