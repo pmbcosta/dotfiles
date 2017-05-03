@@ -1,8 +1,20 @@
+.dockerignore
 .git
 .gitignore
-LICENSE
-VERSION
-README.md
-Changelog.md
-Makefile
-docker-compose.yml
+.log
+.tmp
+
+# Mix artifacts
+_build
+deps
+*.ez
+
+releases
+
+# Erlang crash log
+erl_crash.dump
+
+node_modules
+priv
+
+docs

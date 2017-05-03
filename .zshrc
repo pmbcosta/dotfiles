@@ -227,6 +227,7 @@ alias dbx='dbxcli'
 alias vim='nvim'
 alias sa='source activate dev-env'
 alias evim='vim ~/.config/nvim/init.vim'
+alias lvim='cd $(fasd -d -l -R learning | head -1) && source activate dev-env && vim' 
 
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 

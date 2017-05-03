@@ -31,7 +31,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Autocompletion
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
 " Tab for autocomplete
@@ -44,10 +44,15 @@ Plug 'tpope/vim-commentary'
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-lang/vim-elixir'
 " Python
-Plug 'davidhalter/jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'zchee/deoplete-jedi'
+Plug 'bfredl/nvim-ipy'
 " Javascript
 Plug 'pangloss/vim-javascript'
+Plug 'https://github.com/mxw/vim-jsx'
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 " NERDTree
 Plug 'scrooloose/nerdtree'
 " Misc
@@ -222,6 +227,18 @@ syntax enable
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" Deoplete Javascript Setup
+let g:deoplete#omni#functions = {}
+let g:deoplete#omni#functions.javascript = [
+  \ 'tern#Complete',
+  \ 'jspc#omni'
+\]
+set completeopt=longest,menuone,preview
+let g:deoplete#sources = {}
+let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
+let g:tern#command = ['tern']
+let g:tern#arguments = ['--persistent']
 
 " Haskell autocomplete
 let g:haskellmode_completion_ghc = 0
