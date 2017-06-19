@@ -22,11 +22,13 @@
     },
     {
         "key": "shift+cmd+l",
-        "command": "workbench.action.nextEditor"
+        "command": "workbench.action.nextEditor",
+        "when": "!terminalFocus"
     },
     {
         "key": "shift+cmd+h",
-        "command": "workbench.action.previousEditor"
+        "command": "workbench.action.previousEditor",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+h",
@@ -65,5 +67,25 @@
         "key": "d",
         "command": "deleteFile",
         "when": "listFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
     }
 ]

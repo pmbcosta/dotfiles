@@ -40,6 +40,7 @@
         "autoit": "autoit3",
         "kotlin": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
     },
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "python.linting.enabled": false,
     "editor.fontSize": 14,
     "editor.fontFamily": "Fira Mono",
