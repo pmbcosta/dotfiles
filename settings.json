@@ -40,5 +40,25 @@
         "autoit": "autoit3",
         "kotlin": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
     },
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Fira Mono",
+    "vim.useSystemClipboard": false,
+    "editor.cursorBlinking": "solid",
+    "vim.leader": ",",
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
+        }
+    ]
 }
