@@ -19,5 +19,13 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "workbench.action.nextEditor"
+    }
+    {
+        "key": "shift+cmd+h",
+        "command": "workbench.action.previousEditor"
     }
 ]

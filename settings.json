@@ -59,6 +59,19 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.openGlobalKeybindings",
+                    "args": []
+                }
+            ]
         }
     ]
 }
