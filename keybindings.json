@@ -23,7 +23,7 @@
     {
         "key": "shift+cmd+l",
         "command": "workbench.action.nextEditor"
-    }
+    },
     {
         "key": "shift+cmd+h",
         "command": "workbench.action.previousEditor"
