@@ -72,6 +72,32 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.view.explorer",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "code-runner.run",
+                    "args": []
+                }
+            ]
         }
     ]
 }
