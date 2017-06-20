@@ -1,4 +1,5 @@
 {
+    "workbench.welcome.enabled": false,
     "editor.cursorStyle": "block",
     "workbench.colorTheme": "Solarized Dark",
     "vim.enableNeovim": true,
@@ -11,7 +12,7 @@
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
-        "python": "/Users/paulocosta/anaconda2/envs/dev-env/bin/python",
+        "python": "/Users/paulocosta/.pyenv/shims/python",
         "perl": "perl",
         "ruby": "ruby",
         "go": "go run",
@@ -41,9 +42,11 @@
         "kotlin": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "python.linting.enabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
     "editor.fontSize": 14,
-    "editor.fontFamily": "Fira Mono",
+    "editor.fontFamily": "Menlo",
     "vim.useSystemClipboard": false,
     "editor.cursorBlinking": "solid",
     "vim.leader": ",",
@@ -96,6 +99,19 @@
             "commands": [
                 {
                     "command": "code-runner.run",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "project.manager.listProjectsNewWindow",
                     "args": []
                 }
             ]
