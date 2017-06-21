@@ -64,6 +64,11 @@
         "when": "listFocus"
     },
     {
+        "key": "f",
+        "command": "explorer.newFolder",
+        "when": "listFocus"
+    },
+    {
         "key": "d",
         "command": "deleteFile",
         "when": "listFocus"

@@ -4,7 +4,7 @@
     "workbench.colorTheme": "Solarized Dark",
     "vim.enableNeovim": true,
     "vim.disableAnnoyingNeovimMessage": true,
-    "python.pythonPath": "/Users/paulocosta/anaconda2/envs/dev-env/bin/python",
+    "python.pythonPath": "/Users/paulocosta/.pyenv/shims/python",
     "code-runner.executorMap": {
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
@@ -115,6 +115,20 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "jupyter.runSelectionLine",
+                    "args": []
+                }
+            ]
         }
-    ]
+    ],
+    "jupyter.appendResults": true
 }
