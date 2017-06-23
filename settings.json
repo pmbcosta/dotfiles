@@ -42,6 +42,7 @@
         "kotlin": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 16,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -130,5 +131,14 @@
             ]
         }
     ],
-    "jupyter.appendResults": true
+    "jupyter.appendResults": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/elm-stuff": true,
+        "**/node_modules": true
+    }
 }
