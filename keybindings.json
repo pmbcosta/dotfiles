@@ -120,5 +120,15 @@
         "key": "cmd+w",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
+    },
+    {
+        "key": "space",
+        "command": "list.select",
+        "when": "listFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-list.select",
+        "when": "listFocus"
     }
 ]
