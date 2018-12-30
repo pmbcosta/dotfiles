@@ -1,4 +1,4 @@
-. /usr/bin//z
+. /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -224,7 +224,6 @@ alias kaws="kubectl --kubeconfig="$AWS_KUBE_CONFIG""
 alias ds='while true; do TEXT=$(docker stats --no-stream $(docker ps --format={{.Names}})); sleep 0.1; clear; echo "$TEXT"; done'
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
 alias dbx='dbxcli'
-alias vim='nvim'
 alias sa='source activate dev-env'
 alias evim='vim ~/.config/nvim/init.vim'
 alias lvim='cd $(fasd -d -l -R learning | head -1) && source activate dev-env && vim' 
@@ -238,3 +237,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # The next line enables shell command completion for gcloud.
 export PATH="/usr/local/sbin:$PATH"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
