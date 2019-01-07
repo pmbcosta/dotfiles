@@ -118,4 +118,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Going to Windows user home instead of Ubuntu's user
 cd /mnt/c/Users/2103833348
+
+# Some helpful aliases
+alias gst='git status'
+
