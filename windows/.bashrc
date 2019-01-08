@@ -118,9 +118,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+WINDOWS_HOME=/mnt/c/Users/2103833348
 # Going to Windows user home instead of Ubuntu's user
-cd /mnt/c/Users/2103833348
+cd $WINDOWS_HOME
 
 # Some helpful aliases
 alias gst='git status'
+
+# Adding VBoxManage to PATH
+export PATH=$PATH:/mnt/c/Program\ Files/Oracle/VBoxManage.exe
+
+alias whome='cd $WINDOWS_HOME' 
 
