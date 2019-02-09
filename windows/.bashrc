@@ -125,8 +125,11 @@ cd $WINDOWS_HOME
 # Some helpful aliases
 alias gst='git status'
 
-# Adding VBoxManage to PATH
-export PATH=$PATH:/mnt/c/Program\ Files/Oracle/VBoxManage.exe
-
 alias whome='cd $WINDOWS_HOME' 
+alias xclip='clip.exe'
+
+MONGO_PATH=/mnt/c/Program\ Files/MongoDB/Server/4.0/bin
+
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/lib/node_modules/create-elm-app
+export PATH=$PATH:$MONGO_PATH
 
