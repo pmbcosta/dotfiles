@@ -41,10 +41,9 @@ set -o vi
 export YESOD=/Users/paulocosta/Library/Haskell/bin
 
 # Java & Android config
-export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
+export JAVA8_HOME=$HOME/Programs/java8
 export JAVA_HOME=$JAVA8_HOME
-export ANDROID_HOME=$HOME/Android
+export ANDROID_HOME=$HOME/Android/Sdk
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
@@ -59,7 +58,7 @@ export ANACONDA=/Users/paulocosta/anaconda2/bin
 export PATH=$PATH:$DEX_2_JAR_HOME/bin
 export PATH=$PATH:$APKTOOL_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/ndk-bundle
-export PATH=$PATH:$JAVA_HOME
+export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
 export PATH=$PATH:~/.local/bin
@@ -227,6 +226,7 @@ alias dbx='dbxcli'
 alias sa='source activate dev-env'
 alias evim='vim ~/.config/nvim/init.vim'
 alias lvim='cd $(fasd -d -l -R learning | head -1) && source activate dev-env && vim' 
+alias fu='adb uninstall paulocosta.io.feedbinclient'
 
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 
@@ -238,3 +238,11 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # The next line enables shell command completion for gcloud.
 export PATH="/usr/local/sbin:$PATH"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH=$PATH:/home/paulo/Programs/flutter/bin
+
+# export PATH=$PATH:$HOME/Programs/node/bin
+export PATH=~/.npm-global/bin:$PATH
+
+# Pyenv setup
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
