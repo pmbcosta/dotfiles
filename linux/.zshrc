@@ -246,3 +246,7 @@ export PATH=~/.npm-global/bin:$PATH
 # Pyenv setup
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
