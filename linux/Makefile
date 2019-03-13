@@ -13,6 +13,10 @@ linuxbrew-setup:
 	test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 	test -r ~/.zshrc && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zshrc
 	echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile
+vim-import:
+	cp $(shell pwd)/.zshrc ~/.zshrc
+vim-export:
+	cp ~/.zshrc $(shell pwd)/.zshrc 
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
@@ -30,3 +34,9 @@ help:
 	@echo ""
 	@echo "linuxbrew-setup"
 	@echo "  Installs Linuxbrew"
+	@echo ""
+	@echo "vim-import"
+	@echo "  Applies .vimrc to local machine"
+	@echo ""
+	@echo "vim-export"
+	@echo "  Copies local .vimrc to dotfiles"
