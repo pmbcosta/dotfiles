@@ -30,9 +30,10 @@ nvim-import:
 nvim-export:
 	cp ~/.config/nvim/init.vim $(shell pwd)/.init.vim 
 intellij-export:
-	cp /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml .
+	cp ~/.IntelliJIdea2018.3/config/keymaps/Linux.xml $(shell pwd)/Linux.xml
 intellij-import:
-	cp $(shell cmd)/Linux.xml /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml
+	mkdir -p ~/.IntelliJIdea2018.3/config/keymaps
+	cp $(shell pwd)/Linux.xml ~/.IntelliJIdea2018.3/config/keymaps/Linux.xml
 zsh-export:
 	cp ~/.zshrc $(shell pwd)/.zshrc
 zsh-import:
