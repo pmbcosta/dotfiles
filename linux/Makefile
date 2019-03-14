@@ -1,3 +1,11 @@
+nvim-setup:
+	@echo "Installing pyvim"
+	pip3 install --user pynvim
+	@echo "Installing Plug"
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	@echo "Creating config folder"
+	mkdir -p ~/.config/nvim
 vim-setup:
 	pip3 install --user pynvim
 tillix-import:
@@ -17,6 +25,10 @@ vim-import:
 	cp $(shell pwd)/.vimrc ~/.vimrc
 vim-export:
 	cp ~/.vimrc $(shell pwd)/.vimrc 
+nvim-import:
+	cp $(shell pwd)/init.vim ~/.config/nvim/init.vim
+nvim-export:
+	cp ~/.config/nvim/init.vim $(shell pwd)/.init.vim 
 intellij-export:
 	cp /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml .
 intellij-import:
@@ -26,6 +38,10 @@ help:
 	@echo ""
 	@echo "vim-setup:"
 	@echo "  Installs vim dependencies for plugins"
+	@echo ""
+	@echo ""
+	@echo "nvim-setup:"
+	@echo "  Installs nvim dependencies for plugins"
 	@echo ""
 	@echo "tilix-import"
 	@echo "  Import tilix config from tilix.conf"
@@ -44,6 +60,12 @@ help:
 	@echo ""
 	@echo "vim-export"
 	@echo "  Copies local .vimrc to dotfiles"
+	@echo ""
+	@echo "nvim-import"
+	@echo "  Applies init.vim to ~/.config/nvim/init.vim"
+	@echo ""
+	@echo "nvim-export"
+	@echo "  Copies local init.vim to dotfiles"
 	@echo ""
 	@echo "intellij-export"
 	@echo "  copies local keybind to dotfiles"
