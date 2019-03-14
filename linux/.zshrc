@@ -228,6 +228,7 @@ alias evim='vim ~/.config/nvim/init.vim'
 alias lvim='cd $(fasd -d -l -R learning | head -1) && source activate dev-env && vim' 
 alias fu='adb uninstall paulocosta.io.feedbinclient'
 alias idea='/snap/intellij-idea-ultimate/current/bin/idea.sh'
+alias vim='nvim'
 
 export PROJECT_HOME=/Users/paulocosta/Projects/Learning/learning/python/flask
 

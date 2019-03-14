@@ -33,12 +33,15 @@ intellij-export:
 	cp /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml .
 intellij-import:
 	cp $(shell cmd)/Linux.xml /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml
+zsh-export:
+	cp ~/.zshrc $(shell pwd)/.zshrc
+zsh-import:
+	cp $(shell pwd)/.zshrc ~/.zshrc
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
 	@echo "vim-setup:"
 	@echo "  Installs vim dependencies for plugins"
-	@echo ""
 	@echo ""
 	@echo "nvim-setup:"
 	@echo "  Installs nvim dependencies for plugins"
@@ -72,3 +75,9 @@ help:
 	@echo ""
 	@echo "intellij-import"
 	@echo "  Applies Linux.xml to Intellij keymaps"
+	@echo ""
+	@echo "zsh-export"
+	@echo "  copies local .zshrc to dotfiles"
+	@echo ""
+	@echo "zsh-import"
+	@echo "  Applies dotfiles .zshrc to local config"
