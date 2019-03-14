@@ -14,9 +14,9 @@ linuxbrew-setup:
 	test -r ~/.zshrc && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zshrc
 	echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile
 vim-import:
-	cp $(shell pwd)/.zshrc ~/.zshrc
+	cp $(shell pwd)/.vimrc ~/.vimrc
 vim-export:
-	cp ~/.zshrc $(shell pwd)/.zshrc 
+	cp ~/.vimrc $(shell pwd)/.vimrc 
 intellij-export:
 	cp /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml .
 intellij-import:
