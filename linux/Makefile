@@ -17,6 +17,10 @@ vim-import:
 	cp $(shell pwd)/.zshrc ~/.zshrc
 vim-export:
 	cp ~/.zshrc $(shell pwd)/.zshrc 
+intellij-export:
+	cp /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml .
+intellij-import:
+	cp $(shell cmd)/Linux.xml /home/paulo/.IntelliJIdea2018.3/config/keymaps/Linux.xml
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
@@ -40,3 +44,9 @@ help:
 	@echo ""
 	@echo "vim-export"
 	@echo "  Copies local .vimrc to dotfiles"
+	@echo ""
+	@echo "intellij-export"
+	@echo "  copies local keybind to dotfiles"
+	@echo ""
+	@echo "intellij-import"
+	@echo "  Applies Linux.xml to Intellij keymaps"
