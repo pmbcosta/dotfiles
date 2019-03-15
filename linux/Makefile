@@ -34,8 +34,10 @@ intellij-import:
 	mkdir -p ~/.IntelliJIdea2018.3/config/keymaps
 	cp $(shell pwd)/Linux.xml ~/.IntelliJIdea2018.3/config/keymaps/Linux.xml
 zsh-export:
+	cp ~/.zprofile $(shell pwd)/.zprofile
 	cp ~/.zshrc $(shell pwd)/.zshrc
 zsh-import:
+	cp $(shell pwd)/.zprofile ~/.zprofile
 	cp $(shell pwd)/.zshrc ~/.zshrc
 install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
