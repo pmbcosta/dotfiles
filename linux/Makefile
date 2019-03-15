@@ -36,11 +36,13 @@ zsh-import:
 	cp $(shell pwd)/.zshrc ~/.zshrc
 install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
-	sudo apt-get install xclip gnome-tweak-tool zsh curl wget
+	sudo apt-get install xclip gnome-tweak-tool zsh curl wget npm
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# Brew installs
 	brew install gcc
 	brew install z ag pyenv nvim
+	snap install docker postman spotify
+	pip install docker-compose
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
