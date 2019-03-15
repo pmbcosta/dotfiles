@@ -6,11 +6,10 @@ nvim-setup:
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@echo "Creating config folder"
 	mkdir -p ~/.config/nvim
-vim-setup:
 	pip3 install --user pynvim
-tillix-import:
+tilix-import:
 	dconf load /com/gexperts/Tilix/ < tilix.dconf
-tillix-export:
+tilix-export:
 	dconf dump /com/gexperts/Tilix/ > tilix.dconf
 spotify-setup:
 	sudo apt install ubuntu-restricted-extras
@@ -38,6 +37,10 @@ zsh-export:
 	cp ~/.zshrc $(shell pwd)/.zshrc
 zsh-import:
 	cp $(shell pwd)/.zshrc ~/.zshrc
+install-essential:
+	# gnome-tweak-tool is for mapping CapsLock to Escape
+	sudo apt-get install xclip gnome-tweak-tool zsh curl wget
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
@@ -82,3 +85,6 @@ help:
 	@echo ""
 	@echo "zsh-import"
 	@echo "  Applies dotfiles .zshrc to local config"
+	@echo ""
+	@echo "install-essential"
+	@echo "  Install general packages that I use"
