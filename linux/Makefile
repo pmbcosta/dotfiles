@@ -31,6 +31,7 @@ zsh-export:
 	cp ~/.zprofile $(shell pwd)/.zprofile
 	cp ~/.zshrc $(shell pwd)/.zshrc
 zsh-import:
+	touch ~/.secrets
 	cp $(shell pwd)/.zprofile ~/.zprofile
 	cp $(shell pwd)/.zshrc ~/.zshrc
 install-essential:
