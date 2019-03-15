@@ -40,7 +40,7 @@ zsh-import:
 install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
 	sudo apt-get install xclip gnome-tweak-tool zsh curl wget
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
