@@ -41,7 +41,8 @@ install-essential:
 	# Brew installs
 	brew install gcc
 	brew install z ag pyenv nvim
-	snap install docker postman spotify android-studio intellij-idea-ultimate
+	snap install --classic android-studio
+	snap install docker postman spotify intellij-idea-ultimate
 	pip install docker-compose
 help:
 	@echo "------Linux setup commands------"
