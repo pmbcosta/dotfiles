@@ -1,0 +1,10 @@
+" No sounds
+set visualbell
+set noerrorbells
+
+" Integrate with system clipboard
+set clipboard=unnamedplus, unnamed
+
+let mapleader=","
+nnoremap <leader>g :action GotoDeclaration<CR>
+nnoremap <leader><leader> :action CommentByLineComment<CR>
