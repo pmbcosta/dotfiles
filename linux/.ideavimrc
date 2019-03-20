@@ -10,6 +10,7 @@ nnoremap <leader>g :action GotoDeclaration<CR>
 nnoremap <leader><leader> :action CommentByLineComment<CR>
 vnoremap <leader><leader> :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
 nnoremap <leader>i :action EvaluateExpression<CR>
+vnoremap <leader>i :action EvaluateExpression<CR>
 nnoremap <leader>r :action Run<CR>
 nnoremap <leader>d :action Debug<CR>
 
