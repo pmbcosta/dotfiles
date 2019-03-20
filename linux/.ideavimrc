@@ -8,3 +8,4 @@ set clipboard=unnamedplus, unnamed
 let mapleader=","
 nnoremap <leader>g :action GotoDeclaration<CR>
 nnoremap <leader><leader> :action CommentByLineComment<CR>
+nnoremap <leader>i :action EvaluateExpression<CR>
