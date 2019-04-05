@@ -1,6 +1,7 @@
 " No sounds
 set visualbell
 set noerrorbells
+set surround
 
 " Integrate with system clipboard
 set clipboard=unnamedplus, unnamed
@@ -18,6 +19,7 @@ nnoremap <Leader>g :action FindUsages<CR>
 nnoremap <Leader>s :action GotoClass<CR>
 nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
+nnoremap <Leader>q :action SurroundWith<CR>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
