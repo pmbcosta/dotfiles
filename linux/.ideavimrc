@@ -6,13 +6,15 @@ set noerrorbells
 set clipboard=unnamedplus, unnamed
 
 let mapleader=","
-nnoremap <leader>g :action GotoDeclaration<CR>
+nnoremap <leader>l :action GotoDeclaration<CR>
 nnoremap <leader><leader> :action CommentByLineComment<CR>
 vnoremap <leader><leader> :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
 nnoremap <leader>i :action EvaluateExpression<CR>
 nnoremap <leader>r :action Run<CR>
 nnoremap <leader>d :action Debug<CR>
 nnoremap <Leader>n :action RenameElement<CR>i
+nnoremap <Leader>w :action CloseEditor<CR>
+nnoremap <Leader>g :action FindUsages<CR>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
