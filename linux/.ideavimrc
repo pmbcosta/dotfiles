@@ -17,6 +17,7 @@ nnoremap <Leader>w :action CloseEditor<CR>
 nnoremap <Leader>g :action FindUsages<CR>
 nnoremap <Leader>s :action GotoClass<CR>
 nnoremap <Leader>o :action FileStructurePopup<CR>
+nnoremap <Leader>t :action GotoImplementation<CR>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
