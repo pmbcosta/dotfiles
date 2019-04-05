@@ -1,6 +1,11 @@
 [/]
-prompt-on-close=true
+quake-height-percent=40
+prompt-on-close=false
+copy-on-select=true
+terminal-title-style='none'
 theme-variant='dark'
+session-name='Main'
+quake-hide-headerbar=false
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#829395'
@@ -14,3 +19,14 @@ use-theme-colors=false
 bold-color-set=false
 terminal-bell='none'
 background-color='#002A35'
+
+[keybindings]
+terminal-paste='<Primary>v'
+session-switch-to-terminal-down='<Primary>j'
+session-add-right='<Shift><Alt>v'
+session-add-down='<Shift><Alt>h'
+session-switch-to-terminal-right='<Primary>l'
+session-switch-to-terminal-up='<Primary>k'
+terminal-copy='<Primary>p'
+terminal-find-previous='disabled'
+session-switch-to-terminal-left='<Primary>h'
