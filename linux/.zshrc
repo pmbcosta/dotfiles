@@ -252,3 +252,16 @@ eval "$(pyenv virtualenv-init -)"
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+
+# QoL stuff
+function pbcopy() {
+	xclip -selection clipboard $1
+}
+
+function pbpaste() {
+	xclip -selection clipboard -o
+}
+
+function open() {
+	nautilus $1
+}
