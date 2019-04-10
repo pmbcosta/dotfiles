@@ -21,5 +21,8 @@ nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
 
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
