@@ -6,12 +6,15 @@ terminal-title-style='none'
 theme-variant='dark'
 session-name='Main'
 quake-hide-headerbar=false
+quake-width-percent=100
+window-style='normal'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#829395'
 visible-name='Default'
 palette=['#063541', '#DB312E', '#849900', '#B48800', '#258AD1', '#D23581', '#29A097', '#EDE7D4', '#002A35', '#CA4A15', '#576D74', '#647A82', '#829395', '#6B70C3', '#92A0A0', '#FCF5E2']
 badge-color-set=false
+default-size-columns=80
 cursor-shape='block'
 cursor-colors-set=false
 highlight-colors-set=false
@@ -23,8 +26,8 @@ background-color='#002A35'
 [keybindings]
 terminal-paste='<Primary>v'
 session-switch-to-terminal-down='<Primary>j'
-session-add-right='<Shift><Alt>v'
-session-add-down='<Shift><Alt>h'
+session-add-right='<Primary><Shift>l'
+session-add-down='<Primary><Shift>j'
 session-switch-to-terminal-right='<Primary>l'
 session-switch-to-terminal-up='<Primary>k'
 terminal-copy='<Primary>p'
