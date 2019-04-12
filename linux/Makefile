@@ -45,7 +45,9 @@ install-essential:
 	brew install gcc
 	brew install z ag pyenv nvim pyenv-virtualenv
 	snap install --classic android-studio
-	snap install docker postman spotify intellij-idea-ultimate
+	snap install docker postman spotify intellij-idea-ultimate tilix
+	# Tilix VTE setup for Ubuntu
+	sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 	pip install docker-compose
 help:
 	@echo "------Linux setup commands------"
