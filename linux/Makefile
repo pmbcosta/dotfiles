@@ -43,7 +43,7 @@ install-essential:
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# Brew installs
 	brew install gcc
-	brew install z ag pyenv nvim
+	brew install z ag pyenv nvim pyenv-virtualenv
 	snap install --classic android-studio
 	snap install docker postman spotify intellij-idea-ultimate
 	pip install docker-compose
