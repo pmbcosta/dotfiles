@@ -45,7 +45,7 @@ install-essential:
 	# GCC comes fir
 	brew install gcc
 	brew install z ag pyenv nvim pyenv-virtualenv
-	snap install --classic android-studio slack intellij-idea-ultimate datagrip
+	snap install --classic android-studio slack intellij-idea-ultimate datagrip skype
 	snap install postman spotify insomnia
 	# Tilix VTE setup for Ubuntu
 	sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
