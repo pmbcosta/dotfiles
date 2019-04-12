@@ -39,13 +39,14 @@ zsh-import:
 	cp $(shell pwd)/.zshrc ~/.zshrc
 install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
-	sudo apt-get install xclip gnome-tweak-tool zsh curl wget npm
+	sudo apt-get update
+	sudo apt-get install build-essential xclip gnome-tweak-tool zsh curl wget libssl-dev zlib1g-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	# Brew installs
+	# GCC comes fir
 	brew install gcc
 	brew install z ag pyenv nvim pyenv-virtualenv
-	snap install --classic android-studio
-	snap install docker postman spotify intellij-idea-ultimate tilix
+	snap install --classic android-studio slack intellij-idea-ultimate datagrip
+	snap install postman spotify insomnia
 	# Tilix VTE setup for Ubuntu
 	sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 	pip install docker-compose
