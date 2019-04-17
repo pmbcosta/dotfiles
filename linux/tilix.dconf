@@ -24,8 +24,10 @@ terminal-bell='none'
 background-color='#002A35'
 
 [keybindings]
+win-switch-to-next-session='<Alt>l'
 terminal-paste='<Primary>v'
 session-switch-to-terminal-down='<Primary>j'
+win-switch-to-previous-session='<Alt>h'
 session-add-right='<Primary><Shift>l'
 session-add-down='<Primary><Shift>j'
 session-switch-to-terminal-right='<Primary>l'
