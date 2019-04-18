@@ -45,14 +45,31 @@ install-essential:
 	sudo apt-get update
 	sudo apt-get install build-essential xclip gnome-tweak-tool zsh curl wget libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	# GCC comes fir
+	# GCC comes first
 	brew install gcc
-	brew install z ag pyenv nvim pyenv-virtualenv
-	snap install --classic android-studio slack intellij-idea-ultimate datagrip skype
-	snap install postman spotify insomnia
+	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup
+	# Snap is being whiny when installing multiple packages in the same command. Bummer.
+	snap install --classic android-studio 
+	snap install --classic slack
+	snap install --classic intellij-idea-ultimate
+	snap install --classic datagrip
+	snap install --classic skype
+	snap install postman 
+	snap install insomnia
+	snap install spotify
 	# Tilix VTE setup for Ubuntu
-	sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+	sudo ln -sf /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 	pip install docker-compose
+	# Install GCloud console
+	echo "deb http://packages.cloud.google.com/apt cloud-sdk-$(shell lsb_release -c -s) main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+	curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+	sudo apt-get update && sudo apt-get install google-cloud-sdk
+	gcloud init
+	gcloud components install beta
+	gcloud components update
+	gcloud config set run/region us-east-1
+	gcloud auth configure-docker
+	gcloud components install docker-credential-gcr
 help:
 	@echo "------Linux setup commands------"
 	@echo ""
