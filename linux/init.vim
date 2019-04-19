@@ -4,31 +4,24 @@ if !1 | finish | endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'kien/ctrlp.vim'
-Plug 'tomtom/tcomment_vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'jiangmiao/auto-pairs'
-" Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-" Haskell
-Plug 'eagletmt/ghcmod-vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Required by ghcmod-vim
-Plug 'eagletmt/neco-ghc'
-" Snipmate & deps
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-" Autocompletion
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-" Fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
-" Use tab for insert completion
-Plug 'ervandew/supertab'
+" Fuzzy Finder
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
+" Visual Tinkering
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+
+" Auto Completion
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+" File Browser
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+
+Plug 'tomtom/tcomment_vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -124,13 +117,6 @@ set wildignore+=*/target/**
 
 " ================ Custom Mappings========================
 
-" Disable arrow keys
-
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " Bind leader-leader to tcomment
 map <Leader><Leader> gc
 
@@ -148,5 +134,28 @@ set sidescroll=1
 
 " ================ Custom Settings =========================
 
-" Enable neocomplete at startup
-let g:deoplete#enable_at_startup = 1
+" fzf
+set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+nmap <leader>s :Files<CR>
+
+" Reverse SuperTab completion direction
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" defx
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+  nnoremap <silent><buffer><expr> o
+        \ defx#do_action('open_or_close_tree')
+  nnoremap <silent><buffer><expr> N
+        \ defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> d
+        \ defx#do_action('remove')
+  nnoremap <silent><buffer><expr> l
+        \ defx#do_action('open')
+  nnoremap <silent><buffer><expr> r
+        \ defx#do_action('rename')
+  nnoremap <silent><buffer><expr> c
+        \ defx#do_action('copy')
+  nnoremap <silent><buffer><expr> m
+        \ defx#do_action('move')
+endfunction
