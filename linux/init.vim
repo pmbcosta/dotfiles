@@ -14,6 +14,9 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 
 " Auto Completion
+" Using extensions:
+"      :CocInstall coc-python
+"      :CocInstall coc-python
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " File Browser
