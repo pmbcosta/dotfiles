@@ -19,24 +19,29 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 " File Browser
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-Plug 'tomtom/tcomment_vim'
+" Languages & Syntax
+Plug 'rust-lang/rust.vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'ervandew/supertab'
+
+" Utils
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
 " ================ General Config ====================
 
-set number                      "Line numbers are good
-set incsearch                   "Incremental search
-set hlsearch                    "Highlight search
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
+set number                      " Line numbers are good
+set incsearch                   " Incremental search
+set hlsearch                    " Highlight search
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set history=1000                " Store lots of :cmdline history
+set showcmd                     " Show incomplete cmds down the bottom
+set cmdheight=2                 " Better display for messages
+set showmode                    " Show current mode down the bottom
+set gcr=a:blinkon0              " Disable cursor blink
+set visualbell                  " No sounds
+set autoread                    " Reload files changed outside vim
 
 set ignorecase "Case insensitive search
 set smartcase
@@ -60,6 +65,7 @@ let loaded_matchparen = 1 " Disable Highlighting of matching parens
 
 set noswapfile
 set nobackup
+set nowritebackup
 set nowb
 
 " ================ Persistent Undo ==================
@@ -159,3 +165,30 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> m
         \ defx#do_action('move')
 endfunction
+
+" coc
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Add diagnostic info for https://github.com/itchyny/lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status'
+      \ },
+      \ }
