@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 " Visual Tinkering
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
+Plug 'ntk148v/vim-horizon'
 Plug 'jiangmiao/auto-pairs'
 
 " Auto Completion
@@ -54,7 +55,8 @@ set smartcase
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-colorscheme up
+" colorscheme up
+colorscheme horizon
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
