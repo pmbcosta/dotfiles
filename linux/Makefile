@@ -12,7 +12,8 @@ tilix-import:
 tilix-export:
 	dconf dump /com/gexperts/Tilix/ > tilix.dconf
 spotify-setup: 
-	sudo apt install ubuntu-restricted-extras sudo bash -c "wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavcodec.so.54.71.100 -O /usr/lib/x86_64-linux-gnu/libavcodec.so.54 && wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavformat.so.54.36.100 -O /usr/lib/x86_64-linux-gnu/libavformat.so.54 && wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavutil.so.52.6.100 -O /usr/lib/x86_64-linux-gnu/libavutil.so.52 && ldconfig" 
+	sudo apt-get install ubuntu-restricted-extras
+	sudo bash -c "wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavcodec.so.54.71.100 -O /usr/lib/x86_64-linux-gnu/libavcodec.so.54 && wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavformat.so.54.36.100 -O /usr/lib/x86_64-linux-gnu/libavformat.so.54 && wget https://github.com/ramedeiros/spotify_libraries/raw/master/libavutil.so.52.6.100 -O /usr/lib/x86_64-linux-gnu/libavutil.so.52 && ldconfig" 
 brew-setup:
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 	test -d ~/.linuxbrew && eval $$(~/.linuxbrew/bin/brew shellenv)
@@ -45,6 +46,11 @@ install-essential:
 	sudo apt-get update
 	sudo apt-get install build-essential xclip gnome-tweak-tool zsh curl wget libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	# Installing Spotify with snap has some problems when running local files so I use the debian package here
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+	echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+	sudo apt-get update
+	sudo apt-get install spotify-client
 	# GCC comes first
 	brew install gcc
 	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup
@@ -56,7 +62,6 @@ install-essential:
 	snap install --classic skype
 	snap install postman 
 	snap install insomnia
-	snap install spotify
 	# Tilix VTE setup for Ubuntu
 	sudo ln -sf /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 	pip install docker-compose
