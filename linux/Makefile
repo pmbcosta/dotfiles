@@ -54,7 +54,7 @@ install-essential:
 	sudo apt-get install spotify-client
 	# GCC comes first
 	brew install gcc
-	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup
+	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt
 	# Snap is being whiny when installing multiple packages in the same command. Bummer.
 	snap install --classic android-studio 
 	snap install --classic slack
