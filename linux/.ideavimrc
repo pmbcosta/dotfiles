@@ -16,7 +16,7 @@ nnoremap <leader>d :action Debug<CR>
 nnoremap <Leader>n :action RenameElement<CR>i
 nnoremap <Leader>w :action CloseEditor<CR>
 nnoremap <Leader>g :action FindUsages<CR>
-nnoremap <Leader>s :action GotoClass<CR>
+nnoremap <Leader>s :action GotoFile<CR>
 nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
