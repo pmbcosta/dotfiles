@@ -134,9 +134,6 @@ map <Leader><Leader> gc
 " Leader-M to next window
 nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
 
-" Leader-s to save files
-map <Leader>s :w<CR>
-
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
