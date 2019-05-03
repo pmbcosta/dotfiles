@@ -45,7 +45,7 @@ install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
 	sudo apt-get update
 	sudo apt-get install build-essential xclip gnome-tweak-tool zsh curl wget libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl \
-		postgresql postgresql-contrib
+		postgresql postgresql-contrib libgmp-dev
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# Installing Spotify with snap has some problems when running local files so I use the debian package here
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
@@ -57,6 +57,13 @@ install-essential:
 	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt
 	# Install Haskell Stack
 	curl -sSL https://get.haskellstack.org/ | sh
+	# Install Nix Package Manager & Haskell IDE Server
+	curl https://nixos.org/nix/install | sh
+	nix-env -iA cachix -f https://cachix.org/api/v1/install
+	cachix use hie-nix
+	nix-env -iA hies -f https://github.com/domenkozar/hie-nix/tarball/master
+	mkdir ~/.stack
+	cp coconfig.yaml ~/.stack/config.yaml
 	# Snap is being whiny when installing multiple packages in the same command. Bummer.
 	snap install --classic android-studio 
 	snap install --classic slack
