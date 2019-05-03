@@ -18,6 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 " Using extensions:
 "      :CocInstall coc-python
 "      :CocInstall coc-rls
+"      :CocInstall coc-tsserver
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " File Browser
