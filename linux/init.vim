@@ -153,6 +153,7 @@ nmap <leader>s :Files<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " defx
+nnoremap <Leader>o :Defx<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> o
