@@ -27,6 +27,8 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " Languages & Syntax
 Plug 'rust-lang/rust.vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mxw/vim-jsx'
 
 " Utils
 Plug 'tomtom/tcomment_vim'
@@ -199,3 +201,7 @@ let g:lightline = {
       \   'cocstatus': 'coc#status'
       \ },
       \ }
+
+" vim-jsx
+" Highlight jsx syntax even in non .jsx files
+let g:jsx_ext_required = 0
