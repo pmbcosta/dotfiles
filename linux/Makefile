@@ -45,7 +45,7 @@ install-essential:
 	# gnome-tweak-tool is for mapping CapsLock to Escape
 	sudo apt-get update
 	sudo apt-get install build-essential xclip gnome-tweak-tool zsh curl wget libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl \
-		postgresql postgresql-contrib libgmp-dev
+		postgresql postgresql-contrib libgmp-dev libicu-dev libtinfo-dev
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	# Installing Spotify with snap has some problems when running local files so I use the debian package here
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
