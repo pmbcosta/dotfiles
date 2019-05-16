@@ -134,11 +134,13 @@ set wildignore+=*/target/**
 " Bind leader-leader to tcomment
 map <Leader><Leader> gc
 
-" Leader-M to next window
-nmap <Leader>m <c-w>w<c-d><c-w>W<CR>
-
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+
+nnoremap <C-h> :winc h<CR>
+nnoremap <C-l> :winc l<CR>
+nnoremap <C-j> :winc j<CR>
+nnoremap <C-k> :winc k<CR>
 
 " ================ Scrolling ================================
 
