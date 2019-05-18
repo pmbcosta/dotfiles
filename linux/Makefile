@@ -54,7 +54,9 @@ install-essential:
 	sudo apt-get install spotify-client
 	# GCC comes first
 	brew install gcc
-	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt kubernetes-helm
+	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt kubernetes-helm npm
+	# NPM packages
+	npm install -g elm local-web-server serverless
 	# Install Haskell Stack
 	curl -sSL https://get.haskellstack.org/ | sh
 	# Install Nix Package Manager & Haskell IDE Server
