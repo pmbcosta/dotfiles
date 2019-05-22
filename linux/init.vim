@@ -52,6 +52,9 @@ set gcr=a:blinkon0              " Disable cursor blink
 set visualbell                  " No sounds
 set autoread                    " Reload files changed outside vim
 
+" Disables automatic insertion of comments on newline
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
 set ignorecase "Case insensitive search
 set smartcase
 
