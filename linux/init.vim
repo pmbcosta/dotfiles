@@ -149,6 +149,10 @@ nnoremap <C-k> :winc k<CR>
 
 vnoremap <Leader>y "+y
 
+" Keep visual selection after identing
+:vnoremap < <gv
+:vnoremap > >gv
+
 " ================ Scrolling ================================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
