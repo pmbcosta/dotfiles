@@ -25,10 +25,12 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Languages & Syntax
-Plug 'rust-lang/rust.vim'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mxw/vim-jsx'
+" Plug 'rust-lang/rust.vim'
+" Plug 'ekalinin/Dockerfile.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'
+Plug 'jparise/vim-graphql'
 
 " Utils
 Plug 'tomtom/tcomment_vim'
@@ -141,6 +143,8 @@ nnoremap <C-h> :winc h<CR>
 nnoremap <C-l> :winc l<CR>
 nnoremap <C-j> :winc j<CR>
 nnoremap <C-k> :winc k<CR>
+
+vnoremap <Leader>y "+y
 
 " ================ Scrolling ================================
 
