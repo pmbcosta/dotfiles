@@ -265,3 +265,17 @@ function pbpaste() {
 function open() {
 	nautilus $1
 }
+
+alias emulator='$ANDROID_HOME/emulator/emulator'
+
+function launch_emulator() {
+  $ANDROID_HOME/emulator/emulator -netdelay none -netspeed full -avd Main
+}
+
+function launch_emulator_clear() {
+  $ANDROID_HOME/emulator/emulator -netdelay none -netspeed full -no-snapshot-load -avd Main
+}
+
+function kill_expo() {
+  adb uninstall host.exp.exponent
+}
