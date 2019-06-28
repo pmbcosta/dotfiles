@@ -50,6 +50,14 @@ install-essential:
 	echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 	sudo apt-get update
 	sudo apt-get install spotify-client
+	# Wine
+	sudo dpkg --add-architecture i386
+	wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+	sudo apt-get update
+	sudo apt-get install --install-recommends winehq-stable
+	# Downloads Kindle version compatible with WINE
+	wget -P ~/Downloads/kindle.exe -O kindle.exe https://dw.uptodown.com/dwn/3zsiyfx72EPl6QF2psG_SroAsH5AaFi8ocliBFJpjV7_Yco4_5QeMhAN3y2BC1DAdIlOtiI3g833StOikDnJ4MterP9wQtp5xOJs_MZzblsDDqMw_iIcjy89esgUNQOY/j8E8aWL3jobdWNcwHcbIe5JE6Lt9twtO6S8_UOCStpS0YrOTadP-ep0sqUIvTpYxqwt7GWa4huTYdR-7L16CX7O8px59xLr4-ePbEflY2QPL-Z-IPJyTYR1r7S73oYLB/A2JTUy1B_ETHs2VQf7dJGxECkTOe9QF6Fab43XdUQB3MG_Kz6peIJXwmgnvJk-_V/
 	# GCC comes first
 	brew install gcc
 	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt kubernetes-helm npm
