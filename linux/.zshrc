@@ -72,9 +72,6 @@ export PATH=$PATH:/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin
 export VIRTUALBOX_DISK_SIZE=50000
 export VIRTUALBOX_MEMORY_SIZE="4096"
 
-export NVM_DIR="/Users/paulo/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 export GCLOUD_PROJECT=nifty-time-131012
 
 function dbash() {
@@ -279,3 +276,7 @@ function launch_emulator_clear() {
 function kill_expo() {
   adb uninstall host.exp.exponent
 }
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
