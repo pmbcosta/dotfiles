@@ -35,6 +35,7 @@ intellij-import:
 zsh-export:
 	cp ~/.zprofile $(shell pwd)/.zprofile
 	cp ~/.zshrc $(shell pwd)/.zshrc
+	cp -r .zsh ~/.zsh
 zsh-import:
 	touch ~/.secrets
 	cp $(shell pwd)/.zprofile ~/.zprofile
@@ -60,7 +61,7 @@ install-essential:
 	wget -P ~/Downloads/kindle.exe -O kindle.exe https://dw.uptodown.com/dwn/3zsiyfx72EPl6QF2psG_SroAsH5AaFi8ocliBFJpjV7_Yco4_5QeMhAN3y2BC1DAdIlOtiI3g833StOikDnJ4MterP9wQtp5xOJs_MZzblsDDqMw_iIcjy89esgUNQOY/j8E8aWL3jobdWNcwHcbIe5JE6Lt9twtO6S8_UOCStpS0YrOTadP-ep0sqUIvTpYxqwt7GWa4huTYdR-7L16CX7O8px59xLr4-ePbEflY2QPL-Z-IPJyTYR1r7S73oYLB/A2JTUy1B_ETHs2VQf7dJGxECkTOe9QF6Fab43XdUQB3MG_Kz6peIJXwmgnvJk-_V/
 	# GCC comes first
 	brew install gcc
-	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt kubernetes-helm npm
+	brew install z ag pyenv nvim pyenv-virtualenv awscli rustup cmake wabt kubernetes-helm npm hub
 	# NPM packages
 	npm install -g elm local-web-server serverless
 	# Install Haskell Stack
