@@ -278,7 +278,9 @@ function kill_expo() {
 }
 
 function rn_packages() {
-  npm install --save mobx mobx-react mobx-react-devtools mobx-state-tree react-navigation
+  npm install --save mobx mobx-react mobx-react-devtools \
+    mobx-state-tree react-navigation reactotron-mst \
+    reactotron-react-native react-native-dontenv
 }
 
 export NVM_DIR="$HOME/.nvm"
