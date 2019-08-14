@@ -291,3 +291,5 @@ eval "$(hub alias -s)"
 
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
+
+bindkey '^R' history-incremental-pattern-search-backward
