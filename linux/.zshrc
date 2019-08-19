@@ -42,7 +42,9 @@ export YESOD=/Users/paulocosta/Library/Haskell/bin
 
 # Java & Android config
 export JAVA8_HOME=$HOME/Programs/java8
-export JAVA_HOME=$JAVA8_HOME
+export JAVA12_HOME=/usr/lib/jvm/jdk-12.0.2
+export JAVA_HOME=$JAVA12_HOME
+export PATH=$PATH:$JAVA_HOME/bin
 export ANDROID_HOME=$HOME/Android/Sdk
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
