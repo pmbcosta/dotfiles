@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'ntk148v/vim-horizon'
 Plug 'jiangmiao/auto-pairs'
+Plug 'daveyarwood/vim-alda'
 
 " Auto Completion
 " Using extensions:
