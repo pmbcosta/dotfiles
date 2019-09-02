@@ -145,7 +145,7 @@ function ecr_pbcopy() {
 }
 
 function kbash() {
-  kubectl exec -it $1 -c $2 /bin/bash
+  kubectl exec -i -t $1 -- /bin/bash
 }
 
 function kawsbash() {
