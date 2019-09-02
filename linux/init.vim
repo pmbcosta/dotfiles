@@ -29,6 +29,12 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 
+" Clojure
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'guns/vim-clojure-highlight'
+Plug 'guns/vim-sexp'
+
 " Utils
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
@@ -215,3 +221,8 @@ let g:lightline = {
 " vim-jsx
 " Highlight jsx syntax even in non .jsx files
 let g:jsx_ext_required = 0
+
+" Clojure
+
+" Binds fireplace :Eval to <Leader>R
+vnoremap <Leader>r :Eval<CR>
