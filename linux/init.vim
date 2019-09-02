@@ -26,10 +26,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Languages & Syntax
-" Plug 'rust-lang/rust.vim'
-" Plug 'ekalinin/Dockerfile.vim'
-" Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'mxw/vim-jsx'
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 
