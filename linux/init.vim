@@ -10,10 +10,14 @@ Plug 'junegunn/fzf.vim'
 
 " Visual Tinkering
 Plug 'itchyny/lightline.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'ntk148v/vim-horizon'
 Plug 'jiangmiao/auto-pairs'
 Plug 'daveyarwood/vim-alda'
+
+" Colorschemes
+Plug 'ntk148v/vim-horizon'
+Plug 'flazz/vim-colorschemes'
+Plug 'ayu-theme/ayu-vim'
+Plug 'nightsense/snow'
 
 " Auto Completion
 " Using extensions:
@@ -67,8 +71,14 @@ set smartcase
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
+set termguicolors     " enable true colors support
+" let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
 " colorscheme up
 colorscheme horizon
+" set background=dark
+" colorscheme snow
+highlight Pmenu ctermbg=gray guibg=gray
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
