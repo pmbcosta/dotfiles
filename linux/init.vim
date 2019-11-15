@@ -148,6 +148,7 @@ set wildignore+=*/target/**
 
 " Bind leader-leader to tcomment
 map <Leader><Leader> gc
+nnoremap <F3> gd
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
