@@ -20,11 +20,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'nightsense/snow'
 
 " Auto Completion
-" Using extensions:
-"      :CocInstall coc-python
-"      :CocInstall coc-rls
-"      :CocInstall coc-tsserver
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 
 " File Browser
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -177,7 +173,7 @@ set sidescroll=1
 
 " fzf
 set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
-nmap <leader>s :Files<CR>
+nmap <leader>s :GFiles<CR>
 
 " Reverse SuperTab completion direction
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -203,6 +199,16 @@ function! s:defx_my_settings() abort
 endfunction
 
 " coc
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-rls',
+  \ 'coc-python',
+  \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
