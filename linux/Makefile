@@ -18,15 +18,6 @@ brew-setup:
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 	test -d ~/.linuxbrew && eval $$(~/.linuxbrew/bin/brew shellenv)
 	test -d /home/linuxbrew/.linuxbrew && eval $$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-vim-import:
-	mkdir -p ~/.config/nvim/
-	cp $(shell pwd)/init.vim ~/.config/nvim/init.vim
-	cp $(shell pwd)/.vimrc ~/.vimrc
-	cp coc-settings.json ~/.config/nvim/coc-settings.json 
-vim-export:
-	cp ~/.config/nvim/init.vim $(shell pwd)/init.vim
-	cp ~/.vimrc $(shell pwd)/.vimrc 
-	cp ~/.config/nvim/coc-settings.json coc-settings.json
 intellij-export:
 	cp ~/.IntelliJIdea2018.3/config/keymaps/Linux.xml $(shell pwd)/Linux.xml
 intellij-import:
