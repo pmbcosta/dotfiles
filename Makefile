@@ -9,3 +9,5 @@ vim-export:
 	cp ~/.vimrc $(shell pwd)/.vimrc 
 	cp ~/.ideavimrc $(shell pwd)/.ideavimrc
 	cp ~/.config/nvim/coc-settings.json coc-settings.json
+elm-setup:
+	npm install -g elm elm-test elm-format @elm-tooling/elm-language-server
