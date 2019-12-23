@@ -29,13 +29,10 @@
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
-      }
-    },
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    }
   },
   "javascript.suggestionActions.enabled": false,
-  "typescript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false
 }
