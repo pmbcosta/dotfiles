@@ -10,4 +10,4 @@ vim-export:
 	cp ~/.ideavimrc $(shell pwd)/.ideavimrc
 	cp ~/.config/nvim/coc-settings.json coc-settings.json
 elm-setup:
-	npm install -g elm elm-test elm-format @elm-tooling/elm-language-server
+	npm install -g elm elm-test elm-format create-elm-app @elm-tooling/elm-language-server
