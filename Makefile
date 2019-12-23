@@ -11,3 +11,6 @@ vim-export:
 	cp ~/.config/nvim/coc-settings.json coc-settings.json
 elm-setup:
 	npm install -g elm elm-test elm-format create-elm-app @elm-tooling/elm-language-server
+go-setup:
+	brew install go
+	GO111MODULE=on go get golang.org/x/tools/gopls@latest
