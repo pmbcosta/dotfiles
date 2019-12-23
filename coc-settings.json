@@ -27,6 +27,14 @@
         "elmAnalyseTrigger": "change" // optional
       }
     },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
   },
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,

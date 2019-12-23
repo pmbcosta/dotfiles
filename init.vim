@@ -36,6 +36,9 @@ Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-sexp'
 Plug 'kien/rainbow_parentheses.vim'
 
+" Go
+Plug 'fatih/vim-go'
+
 " Utils
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
@@ -273,3 +276,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
