@@ -26,7 +26,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Languages & Syntax
-Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 
 " Clojure
@@ -206,9 +205,6 @@ endfunction
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-rls',
   \ 'coc-python',
@@ -280,3 +276,5 @@ au Syntax * RainbowParenthesesLoadBraces
 " Go
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_extra_types = 1
