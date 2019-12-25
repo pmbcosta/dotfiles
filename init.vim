@@ -5,7 +5,7 @@ if !1 | finish | endif
 call plug#begin('~/.vim/plugged')
 
 " Fuzzy Finder
-Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Visual Tinkering
