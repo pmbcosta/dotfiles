@@ -42,16 +42,15 @@ export YESOD=/Users/paulocosta/Library/Haskell/bin
 
 # Java & Android config
 export JAVA8_HOME=$HOME/Programs/java8
-export JAVA12_HOME=/usr/lib/jvm/jdk-12.0.2
-export JAVA_HOME=$JAVA12_HOME
-export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=$JAVA8_HOME
 export ANDROID_HOME=$HOME/Android/Sdk
 
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 
 # Golang config
-export GOPATH=/Users/paulocosta/Projects/Learning/learning/golang
+export GOPATH=$HOME/go
+export GO111MODULE=on
 
 # Anaconda
 export ANACONDA=/Users/paulocosta/anaconda2/bin
@@ -145,7 +144,7 @@ function ecr_pbcopy() {
 }
 
 function kbash() {
-  kubectl exec -i -t $1 -- /bin/bash
+  kubectl exec -it $1 -c $2 /bin/bash
 }
 
 function kawsbash() {
@@ -224,6 +223,7 @@ alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
 alias dbx='dbxcli'
 alias sa='source activate dev-env'
 alias evim='vim ~/.config/nvim/init.vim'
+alias ecoc='vim ~/.config/nvim/coc-settings.json'
 alias lvim='cd $(fasd -d -l -R learning | head -1) && source activate dev-env && vim' 
 alias fu='adb uninstall paulocosta.io.feedbinclient'
 alias idea='/snap/intellij-idea-ultimate/current/bin/idea.sh'
@@ -285,6 +285,10 @@ function rn_packages() {
     reactotron-react-native react-native-dontenv
 }
 
+function fulcro_init() {
+  lein new fulcro $1
+}
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
@@ -293,5 +297,3 @@ eval "$(hub alias -s)"
 
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
-
-bindkey '^R' history-incremental-pattern-search-backward
