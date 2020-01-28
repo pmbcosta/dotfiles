@@ -38,6 +38,9 @@ Plug 'kien/rainbow_parentheses.vim'
 " Go
 Plug 'fatih/vim-go'
 
+" Elm
+Plug 'ElmCast/elm-vim'
+
 " Utils
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
