@@ -50,7 +50,8 @@ export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 
 # Golang config
-export GOPATH=/Users/paulocosta/Projects/Learning/learning/golang
+export GOPATH=~/go
+export GO111MODULE=on
 
 # Anaconda
 export ANACONDA=/Users/paulocosta/anaconda2/bin
