@@ -31,7 +31,11 @@
       "command": "gopls",
       "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
-    }
+    },
+    "reason": {
+      "command": "reason-language-server",
+      "filetypes": ["reason"]
+     }
   },
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false
