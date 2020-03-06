@@ -38,6 +38,9 @@ Plug 'kien/rainbow_parentheses.vim'
 " Go
 Plug 'fatih/vim-go'
 
+" Reason
+Plug 'reasonml-editor/vim-reason-plus'
+
 " Elm
 Plug 'ElmCast/elm-vim'
 
