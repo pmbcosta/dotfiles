@@ -1,3 +1,4 @@
+REASON_LSP_VERSION=1.7.8
 vim-import:
 	mkdir -p ~/.config/nvim/
 	cp $(shell pwd)/init.vim ~/.config/nvim/init.vim
@@ -13,8 +14,12 @@ elm-setup:
 	npm install -g elm elm-test elm-format create-elm-app @elm-tooling/elm-language-server
 reason-setup:
 	npm install -g bs-platform
-	npm install -g ocaml-language-server
 	npm install -g esy
+	wget https://github.com/jaredly/reason-language-server/releases/download/${REASON_LSP_VERSION}/rls-macos.zip -O out.zip
+	unzip out.zip
+	mv rls-macos/reason-language-server /usr/local/bin
+	rm out.zip
+	rm -r rls-macos
 go-setup:
 	brew install go
 	GO111MODULE=on go get golang.org/x/tools/gopls@latest
