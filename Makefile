@@ -23,3 +23,8 @@ reason-setup:
 go-setup:
 	brew install go
 	GO111MODULE=on go get golang.org/x/tools/gopls@latest
+haskell-setup:
+	# Stuff for the LSP
+	bash <(curl https://nixos.org/nix/install)
+	nix-env -iA cachix -f https://cachix.org/api/v1/install
+	cachix use all-hies

@@ -44,6 +44,9 @@ Plug 'reasonml-editor/vim-reason-plus'
 " Elm
 Plug 'ElmCast/elm-vim'
 
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
 " Utils
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
