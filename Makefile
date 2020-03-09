@@ -24,7 +24,9 @@ go-setup:
 	brew install go
 	GO111MODULE=on go get golang.org/x/tools/gopls@latest
 haskell-setup:
-	# Stuff for the LSP
-	bash <(curl https://nixos.org/nix/install)
-	nix-env -iA cachix -f https://cachix.org/api/v1/install
-	cachix use all-hies
+	# Stack
+	brew install stack
+	# Building haskell-ide-engine from source cause nix is broken on macos
+	git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
+	cd haskell-ide-engine && stack ./install.hs hie
+	rm -rf haskell-ide-engine
