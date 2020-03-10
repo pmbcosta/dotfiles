@@ -184,7 +184,7 @@ set sidescroll=1
 " ================ Custom Settings =========================
 
 " fzf
-set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+set rtp+=/usr/local/opt/fzf
 nmap <leader>s :GFiles<CR>
 
 " Reverse SuperTab completion direction
