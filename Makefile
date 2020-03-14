@@ -27,6 +27,7 @@ haskell-setup:
 	# Stack
 	brew install stack
 	# Building haskell-ide-engine from source cause nix is broken on macos
+	rm -rf haskell-ide-engine
 	git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
 	cd haskell-ide-engine && stack ./install.hs hie
 	rm -rf haskell-ide-engine
