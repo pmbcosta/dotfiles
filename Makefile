@@ -29,13 +29,13 @@ haskell-setup:
 	# Building haskell-ide-engine from source cause nix is broken on macos
 	rm -rf haskell-ide-engine
 	git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
-	cd haskell-ide-engine && stack ./install.hs hie
+	cd haskell-ide-engine && stack ./install.hs hie hie-8.6.5
 	rm -rf haskell-ide-engine
 	# Install HLint
 	stack install hlint
 	# Install apply-refact
-	stack --resolver=nightly install apply-refact
+	stack install apply-refact
 	# Hident
 	stack install hindent
 	# Stylish
-	stack install stylish-haskell
+	# stack install stylish-haskell

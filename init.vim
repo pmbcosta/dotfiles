@@ -46,7 +46,8 @@ Plug 'ElmCast/elm-vim'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
-Plug 'alx741/vim-stylishask'
+Plug 'alx741/vim-hindent'
+" Plug 'alx741/vim-stylishask'
 
 " Utils
 Plug 'tomtom/tcomment_vim'
