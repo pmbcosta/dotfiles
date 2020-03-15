@@ -31,3 +31,11 @@ haskell-setup:
 	git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
 	cd haskell-ide-engine && stack ./install.hs hie
 	rm -rf haskell-ide-engine
+	# Install HLint
+	stack install hlint
+	# Install apply-refact
+	stack --resolver=nightly install apply-refact
+	# Hident
+	stack install hindent
+	# Stylish
+	stack install stylish-haskell
