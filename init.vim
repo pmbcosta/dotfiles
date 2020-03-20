@@ -49,6 +49,9 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 " Plug 'alx741/vim-stylishask'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Utils
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
