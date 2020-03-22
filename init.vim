@@ -51,6 +51,7 @@ Plug 'alx741/vim-hindent'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " Utils
 Plug 'tomtom/tcomment_vim'
@@ -179,6 +180,8 @@ vnoremap <Leader>y "+y
 " Keep visual selection after identing
 :vnoremap < <gv
 :vnoremap > >gv
+
+au FileType rust nmap <Leader>d <Plug>(rust-def)
 
 " ================ Scrolling ================================
 
