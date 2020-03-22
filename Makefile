@@ -61,3 +61,5 @@ spacemacs-setup:
 	@echo DONE
 rust-setup:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	rustup toolchain add nightly
+	cargo +nightly install racer
