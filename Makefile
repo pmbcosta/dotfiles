@@ -63,3 +63,8 @@ rust-setup:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	rustup toolchain add nightly
 	cargo +nightly install racer
+python-setup:
+	pip3 install virtualenv
+	mkdir -p ~/venv/vim
+	virtualenv -p $(shell which python3) ~/venv/vim
+	source ~/venv/vim/bin/activate && pip install pyvim neovim
