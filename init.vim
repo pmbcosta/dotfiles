@@ -223,7 +223,7 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-json', 
   \ 'coc-rls',
-  \ 'coc-rust-analyzer,'
+  \ 'coc-rust-analyzer',
   \ 'coc-python',
   \ ]
 
