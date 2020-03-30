@@ -51,7 +51,6 @@ Plug 'alx741/vim-hindent'
 
 " Rust
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
 
 " Utils
 Plug 'tomtom/tcomment_vim'
@@ -224,6 +223,7 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-json', 
   \ 'coc-rls',
+  \ 'coc-rust-analyzer,'
   \ 'coc-python',
   \ ]
 
