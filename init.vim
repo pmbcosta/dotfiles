@@ -176,6 +176,12 @@ nnoremap <C-k> :winc k<CR>
 
 vnoremap <Leader>y "+y
 
+" shortcut for opening a new empty tab
+nnoremap <Leader>t :tabe <CR>
+
+" shortcut for closing buffer
+nnoremap <Leader>w :q <CR>
+
 " Keep visual selection after identing
 :vnoremap < <gv
 :vnoremap > >gv
