@@ -176,11 +176,16 @@ nnoremap <C-k> :winc k<CR>
 
 vnoremap <Leader>y "+y
 
-" shortcut for opening a new empty tab
+" opening  a new empty tab
 nnoremap <Leader>t :tabe <CR>
 
-" shortcut for closing buffer
+" Close current buffer
 nnoremap <Leader>w :q <CR>
+
+" Reload current vim config
+nnoremap <Leader>r :so $MYVIMRC <CR>
+
+" short
 
 " Keep visual selection after identing
 :vnoremap < <gv
@@ -261,11 +266,6 @@ let g:lightline = {
 " vim-jsx
 " Highlight jsx syntax even in non .jsx files
 let g:jsx_ext_required = 0
-
-" Clojure
-
-" Binds fireplace :Eval to <Leader>R
-vnoremap <Leader>r :Eval<CR>
 
 " Rainbow Parentheses
 
