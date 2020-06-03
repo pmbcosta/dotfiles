@@ -23,6 +23,10 @@ reason-setup:
 go-setup:
 	brew install go
 	GO111MODULE=on go get golang.org/x/tools/gopls@latest
+	go get github.com/gogo/protobuf/proto
+	go get github.com/gogo/protobuf/jsonpb
+	go get github.com/gogo/protobuf/protoc-gen-gogo
+	go get github.com/gogo/protobuf/gogoproto
 haskell-setup:
 	# Stack
 	brew install stack
