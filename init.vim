@@ -231,6 +231,8 @@ function! s:defx_my_settings() abort
         \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
         \ defx#do_action('move')
+  nnoremap <silent><buffer><expr> h
+        \ defx#do_action('cd', ['..'])
 endfunction
 
 " coc
