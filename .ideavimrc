@@ -26,3 +26,4 @@ nnoremap <C-h> <C-w>h
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+set ideajoin
