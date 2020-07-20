@@ -196,6 +196,8 @@ nnoremap <Leader>r :so $MYVIMRC <CR>
 
 au FileType rust nmap <Leader>d <Plug>(rust-def)
 
+au FileType go nnoremap <Leader>d :GoDef<CR>
+
 " ================ Scrolling ================================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
@@ -229,6 +231,8 @@ function! s:defx_my_settings() abort
         \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
         \ defx#do_action('move')
+  nnoremap <silent><buffer><expr> h
+        \ defx#do_action('cd', ['..'])
 endfunction
 
 " coc
