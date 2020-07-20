@@ -12,7 +12,9 @@ let mapleader=","
 nnoremap <leader>l :action GotoDeclaration<CR>
 nmap <leader><leader> gcc
 vmap <leader><leader> gc
-nnoremap <leader>i :action EvaluateExpression<CR>
+
+vnoremap <leader>e :action EvaluateExpression<CR>
+
 nnoremap <leader>r :action Run<CR>
 nnoremap <leader>d :action Debug<CR>
 nnoremap <Leader>n :action RenameElement<CR>i
@@ -23,8 +25,8 @@ nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
 
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
+imap <C-j> <C-n>
+imap <C-k> <C-p>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
