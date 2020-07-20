@@ -1,15 +1,17 @@
 " No sounds
 set visualbell
 set noerrorbells
+set ideajoin
 set surround
+set commentary
 
 " Integrate with system clipboard
 set clipboard=unnamedplus, unnamed
 
 let mapleader=","
 nnoremap <leader>l :action GotoDeclaration<CR>
-nnoremap <leader><leader> :action CommentByLineComment<CR>
-vnoremap <leader><leader> :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
+nmap <leader><leader> gcc
+vmap <leader><leader> gc
 nnoremap <leader>i :action EvaluateExpression<CR>
 nnoremap <leader>r :action Run<CR>
 nnoremap <leader>d :action Debug<CR>
@@ -26,4 +28,3 @@ nnoremap <C-h> <C-w>h
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-set ideajoin
