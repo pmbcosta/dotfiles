@@ -26,6 +26,8 @@ nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
 
+nnoremap <leader>cf :action ReformatCode<CR>
+
 " This doesn't work properly but I'll leave here for the future.
 " currently I have to map Up/Down on the IDE for it to work.
 " imap <C-j> <C-n>
