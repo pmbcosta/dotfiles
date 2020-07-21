@@ -4,6 +4,7 @@ set noerrorbells
 set ideajoin
 set surround
 set commentary
+set showmode
 
 " Integrate with system clipboard
 set clipboard=unnamedplus, unnamed
@@ -25,8 +26,10 @@ nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
 
-imap <C-j> <C-n>
-imap <C-k> <C-p>
+" This doesn't work properly but I'll leave here for the future.
+" currently I have to map Up/Down on the IDE for it to work.
+" imap <C-j> <C-n>
+" imap <C-k> <C-p>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
