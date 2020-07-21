@@ -1,10 +1,13 @@
-" No sounds
 set visualbell
 set noerrorbells
 set ideajoin
 set surround
 set commentary
 set showmode
+set number
+set smartcase
+set scrolloff=3
+set history=100000
 
 " Integrate with system clipboard
 set clipboard=unnamedplus, unnamed
@@ -26,12 +29,14 @@ nnoremap <Leader>o :action FileStructurePopup<CR>
 nnoremap <Leader>t :action GotoImplementation<CR>
 nnoremap <Leader>q :action SurroundWith<CR>
 
+nnoremap <Leader><S-s> :action Switcher<CR>
 nnoremap <leader>cf :action ReformatCode<CR>
+nmap <Leader>mp :action ManageRecentProjects<CR>
 
-" This doesn't work properly but I'll leave here for the future.
-" currently I have to map Up/Down on the IDE for it to work.
-" imap <C-j> <C-n>
-" imap <C-k> <C-p>
+nnoremap <Leader>f :action FindInPath<CR>
+
+imap <C-j> <Down>
+imap <C-k> <Up>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
