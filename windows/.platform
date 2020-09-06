@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+. /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+
+function whome() {
+  cd /mnt/c/Users/paulo
+}
+
+function open() {
+  explorer.exe $1
+}
+
+# Since I don't know how to run this from here I'll just open the folder
+function uncap() {
+  explorer.exe /home/paulocosta
+}
+
+# QoL stuff
+function pbcopy() {
+	xclip -selection clipboard $1
+}
+
+function pbpaste() {
+	xclip -selection clipboard -o
+}
+
+# C:\Users\paulo\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+function edit_terminal_config() {
+  vim /mnt/c/Users/paulo/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
+}
