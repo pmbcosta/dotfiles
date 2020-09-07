@@ -15,9 +15,9 @@ function open() {
   explorer.exe $1
 }
 
-# Since I don't know how to run this from here I'll just open the folder
+# I can't provide the full path for some reason
 function uncap() {
-  explorer.exe /home/paulocosta
+  cd $HOME && powershell.exe -File uncap.ps1
 }
 
 # QoL stuff
