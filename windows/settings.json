@@ -78,13 +78,22 @@
         // Press Ctrl+Shift+F to open the search box
         { "command": "find", "keys": "ctrl+shift+f" },
 
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        { "command": { "action": "splitPane", "split": "vertical", "splitMode": "duplicate" }, "keys": "alt+shift+v" },
+
+        { "command": { "action": "splitPane", "split": "horizontal", "splitMode": "duplicate" }, "keys": "alt+shift+h" },
 
         // Alt+W closes windows
-        {"command": "closeTab", "keys": "alt+w"}
+        {"command": "closePane", "keys": "alt+w"},
+
+        {"command": "nextTab", "keys": "ctrl+shift+l"},
+
+        {"command": "prevTab", "keys": "ctrl+shift+h"},
+
+        {"command": "commandPalette", "keys": "ctrl+shift+p"},
+
+        { "command": { "action": "moveFocus", "direction": "down"  }, "keys": "alt+j"  },
+        { "command": { "action": "moveFocus", "direction": "left"  }, "keys": "alt+h"  },
+        { "command": { "action": "moveFocus", "direction": "right"  }, "keys": "alt+l"  },
+        { "command": { "action": "moveFocus", "direction": "up"  }, "keys": "alt+k"  }
     ]
 }

@@ -8,6 +8,6 @@ export_zsh:
 uncap_setup:
 	echo "TODO"
 import_terminal_cfg:
-	cp $(WINDOWS_TERMINAL_CFG) .
-export_terminal_cfg:
 	cp settings.json $(WINDOWS_TERMINAL_CFG)
+export_terminal_cfg:
+	cp $(WINDOWS_TERMINAL_CFG) .
