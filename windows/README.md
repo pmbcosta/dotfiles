@@ -19,3 +19,7 @@ Homebrew
 contains platform specific functions and variables 
 that will be loaded on zshrc. I still have to abstract
 that logic and put .zshrc on the top folder.
+
+## Start PowerShell Profile
+
+`New-item –type file –force $profile``
