@@ -1,5 +1,7 @@
 WINDOWS_TERMINAL_CFG="/mnt/c/Users/paulo/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 WINDOWS_HOME="/mnt/c/Users/paulo"
+VSCODE_SETTINGS="/mnt/c/Users/paulo/AppData/Roaming/Code/User/settings.json"
+VSCODE_KEYBINDINGS="/mnt/c/Users/paulo/AppData/Roaming/Code/User/keybindings.json"
 import_zsh:
 	cp ../.zshrc ~/.zshrc
 	cp .platform ~/.platform
@@ -16,3 +18,9 @@ export_ps_profile:
 	cp $(WINDOWS_HOME)/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1 .
 import_ps_profile:
 	cp Microsoft.PowerShell_profile.ps1 $(WINDOWS_HOME)/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+vscode-import:
+	cp ../settings.json $(VSCODE_SETTINGS)
+	cp ../keybindings.json $(VSCODE_KEYBINDINGS)
+vscode-export:
+	cp $(VSCODE_SETTINGS) ../settings.json
+	cp $(VSCODE_KEYBINDINGS) ../keybindings.json
