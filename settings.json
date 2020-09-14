@@ -2,7 +2,7 @@
     "editor.snippetSuggestions": "top",
     "workbench.welcome.enabled": false,
     "editor.cursorStyle": "block",
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Horizon",
     "vim.disableAnnoyingNeovimMessage": true,
     "python.pythonPath": "/Users/paulocosta/.pyenv/shims/python",
     "code-runner.executorMap": {
@@ -46,8 +46,8 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "editor.fontSize": 14,
-    "editor.fontFamily": "Menlo",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "vim.useSystemClipboard": false,
     "editor.cursorBlinking": "solid",
     "vim.leader": ",",
@@ -143,5 +143,7 @@
         "**/deps": true,
         "**/node_modules": true
     },
-    "editor.parameterHints": false
+    "editor.parameterHints": false,
+    "files.autoSave": "onFocusChange",
+    "editor.fontLigatures": true
 }
