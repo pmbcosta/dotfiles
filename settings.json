@@ -3,8 +3,6 @@
     "workbench.welcome.enabled": false,
     "editor.cursorStyle": "block",
     "workbench.colorTheme": "Solarized Dark",
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.disableAnnoyingNeovimMessage": true,
     "python.pythonPath": "/Users/paulocosta/.pyenv/shims/python",
     "code-runner.executorMap": {
