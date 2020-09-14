@@ -39,41 +39,6 @@
         "command": "workbench.action.focusNextGroup"
     },
     {
-        "key": "k",
-        "command": "list.focusUp",
-        "when": "listFocus"
-    },
-    {
-        "key": "j",
-        "command": "list.focusDown",
-        "when": "listFocus"
-    },
-    {
-        "key": "l",
-        "command": "list.expand",
-        "when": "listFocus"
-    },
-    {
-        "key": "h",
-        "command": "list.collapse",
-        "when": "listFocus"
-    },
-    {
-        "key": "n",
-        "command": "explorer.newFile",
-        "when": "listFocus"
-    },
-    {
-        "key": "f",
-        "command": "explorer.newFolder",
-        "when": "listFocus"
-    },
-    {
-        "key": "d",
-        "command": "deleteFile",
-        "when": "listFocus"
-    },
-    {
         "key": "ctrl+m",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
