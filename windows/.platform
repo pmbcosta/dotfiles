@@ -22,11 +22,11 @@ function uncap() {
 
 # QoL stuff
 function pbcopy() {
-	xclip -selection clipboard $1
+  clip.exe $1
 }
 
 function pbpaste() {
-	xclip -selection clipboard -o
+  powershell.exe -command "Get-Clipboard"
 }
 
 function edit_terminal_config() {

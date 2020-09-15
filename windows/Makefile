@@ -18,9 +18,13 @@ export_ps_profile:
 	cp $(WINDOWS_HOME)/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1 .
 import_ps_profile:
 	cp Microsoft.PowerShell_profile.ps1 $(WINDOWS_HOME)/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+	cp -r ./ps1_scripts ~/
 vscode-import:
 	cp ../settings.json $(VSCODE_SETTINGS)
 	cp ../keybindings.json $(VSCODE_KEYBINDINGS)
 vscode-export:
 	cp $(VSCODE_SETTINGS) ../settings.json
 	cp $(VSCODE_KEYBINDINGS) ../keybindings.json
+vim-import:
+	cp ../.ideavimrc ~/.ideavimrc
+	cp ../.ideavimrc $(WINDOWS_HOME)/.ideavimrc
