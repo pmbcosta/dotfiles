@@ -32,3 +32,5 @@ function pbpaste() {
 function edit_terminal_config() {
   vim /mnt/c/Users/paulo/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
 }
+
+export JAVA_HOME=/home/linuxbrew/.linuxbrew/Cellar/openjdk/14.0.1.reinstall

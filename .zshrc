@@ -40,11 +40,6 @@ set -o vi
 # Yesod
 export YESOD=/Users/paulocosta/Library/Haskell/bin
 
-# Java & Android config
-export JAVA8_HOME=$HOME/Programs/java8
-export JAVA_HOME=$JAVA8_HOME
-export ANDROID_HOME=$HOME/Android/Sdk
-
 export DEX_2_JAR_HOME=/usr/local/Cellar/dex2jar/2.0
 export APKTOOL_HOME=/usr/local/Cellar/apktool/2.0.1
 
@@ -59,7 +54,6 @@ export ANACONDA=/Users/paulocosta/anaconda2/bin
 export PATH=$PATH:$DEX_2_JAR_HOME/bin
 export PATH=$PATH:$APKTOOL_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/ndk-bundle
-export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/ejabberd/sbin
 export PATH=$PATH:~/.local/bin
@@ -270,6 +264,22 @@ function rn_packages() {
   npm install --save mobx mobx-react mobx-react-devtools \
     mobx-state-tree react-navigation reactotron-mst \
     reactotron-react-native react-native-dontenv
+}
+
+function new_quarkus() {
+  echo "Group id: "
+  read groupid
+  echo "Artifact id: "
+  read artifactid
+  echo "Extensions (comma-separated, ex: kotlin,graphql):"
+  read extensions
+  echo "group = $groupid"
+  echo "artifact = $artifactid"
+  echo "extensions = $extensions"
+  mvn io.quarkus:quarkus-maven-plugin:1.8.1.Final:create \
+    -DprojectGroupId=$groupid \
+    -DprojectArtifactId=$artifactid \
+    -Dextensions="$extensions"
 }
 
 eval "$(hub alias -s)"
