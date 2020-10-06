@@ -9,6 +9,7 @@
 
 Windows Terminal
 Homebrew
+[Switcheroo](https://github.com/kvakulo/Switcheroo)
 
 ## Capslock
 
