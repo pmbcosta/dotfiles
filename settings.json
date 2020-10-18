@@ -1,57 +1,30 @@
 {
     "editor.snippetSuggestions": "top",
-    "workbench.welcome.enabled": false,
     "editor.cursorStyle": "block",
     "workbench.colorTheme": "Horizon",
-    "vim.disableAnnoyingNeovimMessage": true,
-    "python.pythonPath": "/Users/paulocosta/.pyenv/shims/python",
-    "code-runner.executorMap": {
-        "javascript": "node",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "php": "php",
-        "python": "/Users/paulocosta/.pyenv/shims/python",
-        "perl": "perl",
-        "ruby": "ruby",
-        "go": "go run",
-        "lua": "lua",
-        "groovy": "groovy",
-        "powershell": "powershell -ExecutionPolicy ByPass -File",
-        "bat": "cmd /c",
-        "shellscript": "bash",
-        "fsharp": "fsi",
-        "csharp": "scriptcs",
-        "vbscript": "cscript //Nologo",
-        "typescript": "ts-node",
-        "coffeescript": "coffee",
-        "scala": "scala",
-        "swift": "swift",
-        "julia": "julia",
-        "crystal": "crystal",
-        "ocaml": "ocaml",
-        "r": "Rscript",
-        "applescript": "osascript",
-        "clojure": "lein exec",
-        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-        "racket": "racket",
-        "ahk": "autohotkey",
-        "autoit": "autoit3",
-        "kotlin": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
-    },
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontSize": 16,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
     "editor.fontSize": 16,
     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "vim.useSystemClipboard": false,
     "editor.cursorBlinking": "solid",
     "vim.leader": ",",
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
                 "<leader>",
@@ -73,65 +46,12 @@
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.openGlobalKeybindings",
+                    "command": "workbench.action.quickOpen",
                     "args": []
                 }
             ]
         },
-        {
-            "before": [
-                "<leader>",
-                "n"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.view.explorer",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "r"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "code-runner.run",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "p"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "project.manager.listProjectsNewWindow",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "j"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "jupyter.runSelectionLine",
-                    "args": []
-                }
-            ]
-        }
     ],
-    "jupyter.appendResults": true,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -143,7 +63,7 @@
         "**/deps": true,
         "**/node_modules": true
     },
-    "editor.parameterHints": false,
     "files.autoSave": "onFocusChange",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "explorer.confirmDragAndDrop": false
 }

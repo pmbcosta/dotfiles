@@ -21,12 +21,12 @@
         "when": "inQuickOpen"
     },
     {
-        "key": "shift+alt+l",
+        "key": "tab",
         "command": "workbench.action.nextEditor",
         "when": "!terminalFocus"
     },
     {
-        "key": "shift+alt+h",
+        "key": "shift+tab",
         "command": "workbench.action.previousEditor",
         "when": "!terminalFocus"
     },
