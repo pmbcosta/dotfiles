@@ -28,3 +28,8 @@ vscode-export:
 vim-import:
 	cp ../.ideavimrc ~/.ideavimrc
 	cp ../.ideavimrc $(WINDOWS_HOME)/.ideavimrc
+wsl-config-import:
+	cp .wslconfig $(WINDOWS_HOME)/.wslconfig
+wsl-config-export:
+	cp .wslconfig $(WINDOWS_HOME)/.wslconfig .wslconfig
+
