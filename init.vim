@@ -20,7 +20,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'nightsense/snow'
 
 " Auto Completion
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " File Browser
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
