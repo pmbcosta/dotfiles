@@ -19,7 +19,8 @@ vmap <leader><leader> gc
 
 vnoremap <leader>e :action EvaluateExpression<CR>
 
-nnoremap <leader>r :action Run<CR>
+" nnoremap <leader>r :action Run<CR>
+vmap <leader>r :action Rider.Plugins.FSharp.SendToFsi<CR>
 nnoremap <leader>d :action Debug<CR>
 nnoremap <Leader>n :action RenameElement<CR>i
 nnoremap <Leader>w :action CloseEditor<CR>
