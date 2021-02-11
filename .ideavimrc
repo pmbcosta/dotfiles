@@ -18,9 +18,8 @@ nmap <leader><leader> gcc
 vmap <leader><leader> gc
 
 vnoremap <leader>e :action EvaluateExpression<CR>
-
 " nnoremap <leader>r :action Run<CR>
-vmap <leader>r :action Rider.Plugins.FSharp.SendToFsi<CR>
+" vmap <leader>r :action Rider.Plugins.FSharp.SendToFsi<CR>
 nnoremap <leader>d :action Debug<CR>
 nnoremap <Leader>n :action RenameElement<CR>i
 nnoremap <Leader>w :action CloseEditor<CR>
@@ -41,3 +40,12 @@ imap <C-k> <Up>
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+
+" Cursive
+vmap <leader>r :action :cursive.repl.actions/run-top-sexp<CR>
+
+" wrapping
+map <leader>( :action :cursive.actions.paredit/wrap-paren<CR>
+map <leader>[ :action :cursive.actions.paredit/wrap-square<CR>
+map <leader>{ :action :cursive.actions.paredit/wrap-curly<CR>
+map <leader>" :action :cursive.actions.paredit/wrap-quotes<CR>
