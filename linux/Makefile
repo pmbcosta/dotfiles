@@ -52,12 +52,6 @@ install-apps:
 	snap install insomnia
 haskell-setup:
 	sudo dpkg --add-architecture i386
-	wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-	sudo apt-get update
-	sudo apt-get install --install-recommends winehq-stable
-	# Downloads Kindle version compatible with WINE
-	wget -P ~/Downloads/kindle.exe -O kindle.exe https://dw.uptodown.com/dwn/3zsiyfx72EPl6QF2psG_SroAsH5AaFi8ocliBFJpjV7_Yco4_5QeMhAN3y2BC1DAdIlOtiI3g833StOikDnJ4MterP9wQtp5xOJs_MZzblsDDqMw_iIcjy89esgUNQOY/j8E8aWL3jobdWNcwHcbIe5JE6Lt9twtO6S8_UOCStpS0YrOTadP-ep0sqUIvTpYxqwt7GWa4huTYdR-7L16CX7O8px59xLr4-ePbEflY2QPL-Z-IPJyTYR1r7S73oYLB/A2JTUy1B_ETHs2VQf7dJGxECkTOe9QF6Fab43XdUQB3MG_Kz6peIJXwmgnvJk-_V/
 	# Install Nix Package Manager & Haskell IDE Server
 	curl https://nixos.org/nix/install | sh
 	nix-env -iA cachix -f https://cachix.org/api/v1/install
@@ -67,6 +61,14 @@ haskell-setup:
 	cp coconfig.yaml ~/.stack/config.yaml
 	# Install Haskell Stack
 	curl -sSL https://get.haskellstack.org/ | sh
+wine-setup:
+	wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+	sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+	sudo apt-get update
+	sudo apt-get install --install-recommends winehq-stable
+kindle-dl:
+	# Downloads Kindle version compatible with WINE
+	wget -P ~/Downloads/kindle.exe -O kindle.exe https://dw.uptodown.com/dwn/3zsiyfx72EPl6QF2psG_SroAsH5AaFi8ocliBFJpjV7_Yco4_5QeMhAN3y2BC1DAdIlOtiI3g833StOikDnJ4MterP9wQtp5xOJs_MZzblsDDqMw_iIcjy89esgUNQOY/j8E8aWL3jobdWNcwHcbIe5JE6Lt9twtO6S8_UOCStpS0YrOTadP-ep0sqUIvTpYxqwt7GWa4huTYdR-7L16CX7O8px59xLr4-ePbEflY2QPL-Z-IPJyTYR1r7S73oYLB/A2JTUy1B_ETHs2VQf7dJGxECkTOe9QF6Fab43XdUQB3MG_Kz6peIJXwmgnvJk-_V/
 gcloud-setup:
 	# Install GCloud console
 	echo "deb http://packages.cloud.google.com/apt cloud-sdk-$(shell lsb_release -c -s) main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
