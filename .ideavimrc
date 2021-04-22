@@ -34,6 +34,7 @@ nnoremap <leader>cf :action ReformatCode<CR>
 nmap <Leader>mp :action ManageRecentProjects<CR>
 
 nnoremap <Leader>f :action FindInPath<CR>
+nnoremap <Leader>m :action Generate<CR>
 
 imap <C-j> <Down>
 imap <C-k> <Up>

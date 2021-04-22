@@ -5,7 +5,8 @@ if !1 | finish | endif
 call plug#begin('~/.vim/plugged')
 
 " Fuzzy Finder
-Plug '/usr/local/opt/fzf'
+" Plug '/home/linuxbrew/.linuxbrew/bin/fzf'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Visual Tinkering
@@ -51,6 +52,10 @@ Plug 'ElmCast/elm-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 " Plug 'alx741/vim-stylishask'
+
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -208,8 +213,8 @@ set sidescroll=1
 " ================ Custom Settings =========================
 
 " fzf
-set rtp+=/usr/local/opt/fzf
 nmap <leader>s :GFiles<CR>
+nmap <leader>S :Files<CR>
 
 " Reverse SuperTab completion direction
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -244,6 +249,7 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-rust-analyzer',
   \ 'coc-python',
+  \ 'coc-elixir',
   \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
